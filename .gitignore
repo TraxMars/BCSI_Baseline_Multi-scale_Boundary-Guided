@@ -1,0 +1,37 @@
+# Model weights and generated data
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.onnx
+*.npz
+*.npy
+*.h5
+*.hdf5
+*.nii
+*.nii.gz
+*.mha
+*.mhd
+
+# Generated visualizations
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.pdf
+*.svg
+*.mp4
+
+# Caches, environments, and local runtime files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.idea/
+.vscode/
+.DS_Store
+*.lock
+events.out.tfevents.*
+*.zip
+*.tar
+*.tar.gz
