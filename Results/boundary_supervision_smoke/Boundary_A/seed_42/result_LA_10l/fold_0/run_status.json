@@ -1,0 +1,6 @@
+{
+  "state": "completed",
+  "iteration": 2,
+  "boundary_mode": "deep",
+  "best_validation_dice": 0.18169149458603884
+}

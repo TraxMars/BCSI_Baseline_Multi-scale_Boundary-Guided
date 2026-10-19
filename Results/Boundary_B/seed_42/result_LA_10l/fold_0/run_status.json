@@ -1,0 +1,5 @@
+{
+  "state": "training",
+  "iteration": 10200,
+  "boundary_mode": "local",
+  "total_loss": 0.047904133796691895

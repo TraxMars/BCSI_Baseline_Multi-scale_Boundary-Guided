@@ -1,0 +1,8 @@
+[19:46:45.207] Namespace(data_path='/aita_data/home/aita_duanxuelong/Dataset/LA', dataset='LA', labeled_num=10, nms=True, in_channels=1, num_classes=2, patch_size=[112, 112, 80], batch_size=4, labeled_bs=2, seed=42, base_lr=0.01, max_iterations=2, n_fold=1, output_dir='Results/boundary_supervision_smoke', test_interval=2, resume_model_path=None, start_iteration=0, consistency_rampup=200.0, consistency=0.1, ema_decay=0.9, device='cuda:0', boundary_mode='deep', boundary_weight=0.1, guidance_mode='none')
+[19:46:46.244] 4 iterations per epoch
+[19:46:48.026] iteration 0 : loss : 0.999642 supervised : 0.931695 consistency : 0.062821 lr : 0.009999
+[19:46:48.031] boundary mode=deep total=0.679055 positive_ratios=[0.05148427188396454, 0.10229192674160004, 0.19713008403778076, 0.3622448742389679, 0.5816326141357422]
+[19:46:48.318] iteration 1 : loss : 1.063800 supervised : 0.994400 consistency : 0.036087 lr : 0.009998
+[19:46:48.320] boundary mode=deep total=0.693752 positive_ratios=[0.05157046765089035, 0.10234374552965164, 0.2014349400997162, 0.37040814757347107, 0.6142857074737549]
+[19:47:53.098] iteration 2 : asd : 27.811223 boundary_f1_1voxel : 0.042862
+[19:47:53.663] iteration 2 : mean_dice : 0.181691 mean_hd95 : 56.231752

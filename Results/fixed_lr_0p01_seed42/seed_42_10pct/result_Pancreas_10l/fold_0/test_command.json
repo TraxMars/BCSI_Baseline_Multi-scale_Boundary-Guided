@@ -1,0 +1,18 @@
+[
+  "/home/duanxuelong/.conda/envs/SSL/bin/python",
+  "-u",
+  "-B",
+  "/home/duanxuelong/Baseline/BCSI_Baseline/Results/fixed_lr_0p01_seed42/source_snapshot/prediction.py",
+  "--dataset",
+  "Pancreas",
+  "--data_path",
+  "/home/duanxuelong/Dataset/Pancreas",
+  "--patch_size",
+  "96",
+  "96",
+  "96",
+  "--model_path",
+  "/home/duanxuelong/Baseline/BCSI_Baseline/Results/fixed_lr_0p01_seed42/seed_42_10pct/result_Pancreas_10l/fold_0/Model_iter_29200.pth",
+  "--device",
+  "cuda:0"
+]

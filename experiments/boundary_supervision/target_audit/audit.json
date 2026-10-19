@@ -1,0 +1,124 @@
+{
+  "dataset": "LA",
+  "labeled_percent": 10,
+  "labeled_cases": 8,
+  "crops_per_case": 2,
+  "summary": {
+    "112x112x80": [
+      {
+        "scale": 1,
+        "shape": "(112, 112, 80)",
+        "count": 16,
+        "positive_ratio_mean": 0.05121964425779879,
+        "positive_ratio_min": 0.032844386994838715,
+        "positive_ratio_max": 0.06671217083930969,
+        "vanished_foreground_count": 0,
+        "empty_boundary_count": 0,
+        "high_coverage_count": 0
+      },
+      {
+        "scale": 2,
+        "shape": "(56, 56, 40)",
+        "count": 16,
+        "positive_ratio_mean": 0.10112603660672903,
+        "positive_ratio_min": 0.06583227217197418,
+        "positive_ratio_max": 0.1314253807067871,
+        "vanished_foreground_count": 0,
+        "empty_boundary_count": 0,
+        "high_coverage_count": 0
+      },
+      {
+        "scale": 3,
+        "shape": "(28, 28, 20)",
+        "count": 16,
+        "positive_ratio_mean": 0.19328364171087742,
+        "positive_ratio_min": 0.13195152580738068,
+        "positive_ratio_max": 0.24821428954601288,
+        "vanished_foreground_count": 0,
+        "empty_boundary_count": 0,
+        "high_coverage_count": 0
+      },
+      {
+        "scale": 4,
+        "shape": "(14, 14, 10)",
+        "count": 16,
+        "positive_ratio_mean": 0.35054209269583225,
+        "positive_ratio_min": 0.2602040767669678,
+        "positive_ratio_max": 0.43622449040412903,
+        "vanished_foreground_count": 0,
+        "empty_boundary_count": 0,
+        "high_coverage_count": 0
+      },
+      {
+        "scale": 5,
+        "shape": "(7, 7, 5)",
+        "count": 16,
+        "positive_ratio_mean": 0.5617346912622452,
+        "positive_ratio_min": 0.37959182262420654,
+        "positive_ratio_max": 0.7755101919174194,
+        "vanished_foreground_count": 0,
+        "empty_boundary_count": 0,
+        "high_coverage_count": 0
+      }
+    ],
+    "96x96x96": [
+      {
+        "scale": 1,
+        "shape": "(96, 96, 96)",
+        "count": 16,
+        "positive_ratio_mean": 0.046088112401776016,
+        "positive_ratio_min": 0.027908889576792717,
+        "positive_ratio_max": 0.05959630757570267,
+        "vanished_foreground_count": 0,
+        "empty_boundary_count": 0,
+        "high_coverage_count": 0
+      },
+      {
+        "scale": 2,
+        "shape": "(48, 48, 48)",
+        "count": 16,
+        "positive_ratio_mean": 0.0909271240234375,
+        "positive_ratio_min": 0.05434389412403107,
+        "positive_ratio_max": 0.11814597994089127,
+        "vanished_foreground_count": 0,
+        "empty_boundary_count": 0,
+        "high_coverage_count": 0
+      },
+      {
+        "scale": 3,
+        "shape": "(24, 24, 24)",
+        "count": 16,
+        "positive_ratio_mean": 0.17441587056964636,
+        "positive_ratio_min": 0.1006944477558136,
+        "positive_ratio_max": 0.22280092537403107,
+        "vanished_foreground_count": 0,
+        "empty_boundary_count": 0,
+        "high_coverage_count": 0
+      },
+      {
+        "scale": 4,
+        "shape": "(12, 12, 12)",
+        "count": 16,
+        "positive_ratio_mean": 0.3228804962709546,
+        "positive_ratio_min": 0.1770833283662796,
+        "positive_ratio_max": 0.4288194477558136,
+        "vanished_foreground_count": 0,
+        "empty_boundary_count": 0,
+        "high_coverage_count": 0
+      },
+      {
+        "scale": 5,
+        "shape": "(6, 6, 6)",
+        "count": 16,
+        "positive_ratio_mean": 0.5454282406717539,
+        "positive_ratio_min": 0.27314814925193787,
+        "positive_ratio_max": 0.7037037014961243,
+        "vanished_foreground_count": 0,
+        "empty_boundary_count": 0,
+        "high_coverage_count": 0
+      }
+    ]
+  },
+  "train_list_sha256": "e88c3f0bae70edcca4bc16eca890673eee2bf3f7b74418249cb01b8cde2f924e",
+  "note": "Fixed seeded original crop/rotation/flip; 96-cube is a target diagnostic, not a new LA experiment."
+}

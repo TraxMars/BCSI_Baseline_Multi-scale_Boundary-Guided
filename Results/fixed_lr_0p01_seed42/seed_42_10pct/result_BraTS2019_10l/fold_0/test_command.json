@@ -1,0 +1,18 @@
+[
+  "/home/duanxuelong/.conda/envs/SSL/bin/python",
+  "-u",
+  "-B",
+  "/home/duanxuelong/Baseline/BCSI_Baseline/Results/fixed_lr_0p01_seed42/source_snapshot/prediction.py",
+  "--dataset",
+  "BraTS2019",
+  "--data_path",
+  "/home/duanxuelong/Dataset/brats19",
+  "--patch_size",
+  "96",
+  "96",
+  "96",
+  "--model_path",
+  "/home/duanxuelong/Baseline/BCSI_Baseline/Results/fixed_lr_0p01_seed42/seed_42_10pct/result_BraTS2019_10l/fold_0/Model_iter_15600.pth",
+  "--device",
+  "cuda:0"
+]

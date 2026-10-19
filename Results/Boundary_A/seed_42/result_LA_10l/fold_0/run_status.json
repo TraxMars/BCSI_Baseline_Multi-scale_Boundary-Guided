@@ -1,0 +1,6 @@
+{
+  "state": "training",
+  "iteration": 10333,
+  "boundary_mode": "deep",
+  "total_loss": 0.05157780647277832
+}

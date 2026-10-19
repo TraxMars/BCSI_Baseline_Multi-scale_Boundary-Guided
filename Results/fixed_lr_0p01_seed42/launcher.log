@@ -1,0 +1,41 @@
+Started LA_10pct: PID 1697672, GPU 2
+Started LA_20pct: PID 1697673, GPU 2
+Started Pancreas_10pct: PID 1697674, GPU 4
+Started Pancreas_20pct: PID 1697675, GPU 4
+Started BraTS2019_10pct: PID 1697676, GPU 6
+Started BraTS2019_20pct: PID 1697677, GPU 6
+Traceback (most recent call last):
+  File "/home/duanxuelong/Baseline/BCSI_Baseline/experiments/fixed_lr_0p01_seed42/run_experiment.py", line 350, in run
+    write_status(status)
+  File "/home/duanxuelong/Baseline/BCSI_Baseline/experiments/fixed_lr_0p01_seed42/run_experiment.py", line 60, in write_status
+    write_json(STATUS_PATH, status)
+  File "/home/duanxuelong/Baseline/BCSI_Baseline/experiments/fixed_lr_0p01_seed42/run_experiment.py", line 53, in write_json
+    temporary.write_text(json.dumps(value, indent=2, ensure_ascii=False,
+  File "/home/duanxuelong/.conda/envs/SSL/lib/python3.8/pathlib.py", line 1255, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors) as f:
+  File "/home/duanxuelong/.conda/envs/SSL/lib/python3.8/pathlib.py", line 1222, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/home/duanxuelong/.conda/envs/SSL/lib/python3.8/pathlib.py", line 1078, in _opener
+    return self._accessor.open(self, flags, mode)
+OSError: [Errno 28] No space left on device: '/home/duanxuelong/Baseline/BCSI_Baseline/Results/fixed_lr_0p01_seed42/run_status.json.tmp'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/duanxuelong/Baseline/BCSI_Baseline/experiments/fixed_lr_0p01_seed42/run_experiment.py", line 390, in <module>
+    main()
+  File "/home/duanxuelong/Baseline/BCSI_Baseline/experiments/fixed_lr_0p01_seed42/run_experiment.py", line 386, in main
+    prepare(arguments.gpus) if arguments.prepare else run()
+  File "/home/duanxuelong/Baseline/BCSI_Baseline/experiments/fixed_lr_0p01_seed42/run_experiment.py", line 367, in run
+    write_status(status)
+  File "/home/duanxuelong/Baseline/BCSI_Baseline/experiments/fixed_lr_0p01_seed42/run_experiment.py", line 60, in write_status
+    write_json(STATUS_PATH, status)
+  File "/home/duanxuelong/Baseline/BCSI_Baseline/experiments/fixed_lr_0p01_seed42/run_experiment.py", line 53, in write_json
+    temporary.write_text(json.dumps(value, indent=2, ensure_ascii=False,
+  File "/home/duanxuelong/.conda/envs/SSL/lib/python3.8/pathlib.py", line 1255, in write_text
+    with self.open(mode='w', encoding=encoding, errors=errors) as f:
+  File "/home/duanxuelong/.conda/envs/SSL/lib/python3.8/pathlib.py", line 1222, in open
+    return io.open(self, mode, buffering, encoding, errors, newline,
+  File "/home/duanxuelong/.conda/envs/SSL/lib/python3.8/pathlib.py", line 1078, in _opener
+    return self._accessor.open(self, flags, mode)
+OSError: [Errno 28] No space left on device: '/home/duanxuelong/Baseline/BCSI_Baseline/Results/fixed_lr_0p01_seed42/run_status.json.tmp'

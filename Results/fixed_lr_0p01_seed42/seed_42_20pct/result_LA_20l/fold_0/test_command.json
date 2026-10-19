@@ -1,0 +1,18 @@
+[
+  "/home/duanxuelong/.conda/envs/SSL/bin/python",
+  "-u",
+  "-B",
+  "/home/duanxuelong/Baseline/BCSI_Baseline/Results/fixed_lr_0p01_seed42/source_snapshot/prediction.py",
+  "--dataset",
+  "LA",
+  "--data_path",
+  "/home/duanxuelong/Dataset/LA",
+  "--patch_size",
+  "112",
+  "112",
+  "80",
+  "--model_path",
+  "/home/duanxuelong/Baseline/BCSI_Baseline/Results/fixed_lr_0p01_seed42/seed_42_20pct/result_LA_20l/fold_0/Model_iter_25600.pth",
+  "--device",
+  "cuda:0"
+]

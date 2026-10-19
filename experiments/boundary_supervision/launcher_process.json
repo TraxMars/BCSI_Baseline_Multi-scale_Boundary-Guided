@@ -1,0 +1,22 @@
+{
+  "pid": 2405915,
+  "command": [
+    "/aita_data/home/aita_duanxuelong/.conda/envs/SSL29/bin/python",
+    "-u",
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/experiments/boundary_supervision/run_ab.py",
+    "--dataset",
+    "LA",
+    "--labeled_num",
+    "10",
+    "--data_path",
+    "/aita_data/home/aita_duanxuelong/Dataset/LA",
+    "--gpus",
+    "2",
+    "3",
+    "--manifest",
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/experiments/boundary_supervision/launch_manifest.json",
+    "--execute"
+  ],
+  "log": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/experiments/boundary_supervision/formal_launcher.log",
+  "state": "launched"
+}

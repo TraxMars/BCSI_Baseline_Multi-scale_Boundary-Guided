@@ -1,0 +1,94 @@
+{
+  "checked_at": "2026-10-09T15:12:19+08:00",
+  "passed": true,
+  "torch_version": "1.10.2+cu113",
+  "fixed_lr_optimizer_updates_checked": 30000,
+  "checked_lrs": {
+    "0": 0.01,
+    "1": 0.01,
+    "7999": 0.01,
+    "8000": 0.01,
+    "8001": 0.01,
+    "15999": 0.01,
+    "16000": 0.01,
+    "24000": 0.01,
+    "30000": 0.01
+  },
+  "original_schedule_lr_at_7999": 3.0705700652903985e-06,
+  "baseline_sources_unchanged": true,
+  "only_snapshot_trainer_scheduler_changed": true,
+  "checked_jobs": [
+    {
+      "key": "LA_10pct",
+      "training_cases": 80,
+      "labeled_cases": 8,
+      "sample_shape": [
+        1,
+        112,
+        112,
+        80
+      ],
+      "gpu": 2
+    },
+    {
+      "key": "LA_20pct",
+      "training_cases": 80,
+      "labeled_cases": 16,
+      "sample_shape": [
+        1,
+        112,
+        112,
+        80
+      ],
+      "gpu": 2
+    },
+    {
+      "key": "Pancreas_10pct",
+      "training_cases": 62,
+      "labeled_cases": 6,
+      "sample_shape": [
+        1,
+        96,
+        96,
+        96
+      ],
+      "gpu": 4
+    },
+    {
+      "key": "Pancreas_20pct",
+      "training_cases": 62,
+      "labeled_cases": 12,
+      "sample_shape": [
+        1,
+        96,
+        96,
+        96
+      ],
+      "gpu": 4
+    },
+    {
+      "key": "BraTS2019_10pct",
+      "training_cases": 250,
+      "labeled_cases": 25,
+      "sample_shape": [
+        1,
+        96,
+        96,
+        96
+      ],
+      "gpu": 6
+    },
+    {
+      "key": "BraTS2019_20pct",
+      "training_cases": 250,
+      "labeled_cases": 50,
+      "sample_shape": [
+        1,
+        96,
+        96,
+        96
+      ],
+      "gpu": 6
+    }
+  ]
+}

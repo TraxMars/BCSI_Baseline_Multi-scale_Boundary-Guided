@@ -1,0 +1,508 @@
+{
+  "generated_at": "2026-10-19T19:54:21.890992+08:00",
+  "automated_tests": {
+    "gradient_matrices": {
+      "deep": [
+        [
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          true,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          false
+        ],
+        [
+          true,
+          true,
+          true,
+          true,
+          true
+        ]
+      ],
+      "local": [
+        [
+          true,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          true,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          true
+        ]
+      ]
+    },
+    "shape_audits": {
+      "96x96x96": [
+        {
+          "shape": [
+            1,
+            1,
+            96,
+            96,
+            96
+          ],
+          "positive_ratio": 0.03126808628439903,
+          "per_sample_positive_ratio": [
+            0.03126808628439903
+          ],
+          "foreground_ratio": 0.125,
+          "vanished_foreground_samples": 0,
+          "empty_boundary_samples": 0,
+          "high_coverage_samples": 0
+        },
+        {
+          "shape": [
+            1,
+            1,
+            48,
+            48,
+            48
+          ],
+          "positive_ratio": 0.06264467537403107,
+          "per_sample_positive_ratio": [
+            0.06264467537403107
+          ],
+          "foreground_ratio": 0.125,
+          "vanished_foreground_samples": 0,
+          "empty_boundary_samples": 0,
+          "high_coverage_samples": 0
+        },
+        {
+          "shape": [
+            1,
+            1,
+            24,
+            24,
+            24
+          ],
+          "positive_ratio": 0.12615740299224854,
+          "per_sample_positive_ratio": [
+            0.12615740299224854
+          ],
+          "foreground_ratio": 0.125,
+          "vanished_foreground_samples": 0,
+          "empty_boundary_samples": 0,
+          "high_coverage_samples": 0
+        },
+        {
+          "shape": [
+            1,
+            1,
+            12,
+            12,
+            12
+          ],
+          "positive_ratio": 0.25925925374031067,
+          "per_sample_positive_ratio": [
+            0.25925925374031067
+          ],
+          "foreground_ratio": 0.125,
+          "vanished_foreground_samples": 0,
+          "empty_boundary_samples": 0,
+          "high_coverage_samples": 0
+        },
+        {
+          "shape": [
+            1,
+            1,
+            6,
+            6,
+            6
+          ],
+          "positive_ratio": 0.5740740895271301,
+          "per_sample_positive_ratio": [
+            0.5740740895271301
+          ],
+          "foreground_ratio": 0.125,
+          "vanished_foreground_samples": 0,
+          "empty_boundary_samples": 0,
+          "high_coverage_samples": 0
+        }
+      ],
+      "112x112x80": [
+        {
+          "shape": [
+            1,
+            1,
+            112,
+            112,
+            80
+          ],
+          "positive_ratio": 0.030373087152838707,
+          "per_sample_positive_ratio": [
+            0.030373087152838707
+          ],
+          "foreground_ratio": 0.125,
+          "vanished_foreground_samples": 0,
+          "empty_boundary_samples": 0,
+          "high_coverage_samples": 0
+        },
+        {
+          "shape": [
+            1,
+            1,
+            56,
+            56,
+            40
+          ],
+          "positive_ratio": 0.06084183603525162,
+          "per_sample_positive_ratio": [
+            0.06084183603525162
+          ],
+          "foreground_ratio": 0.125,
+          "vanished_foreground_samples": 0,
+          "empty_boundary_samples": 0,
+          "high_coverage_samples": 0
+        },
+        {
+          "shape": [
+            1,
+            1,
+            28,
+            28,
+            20
+          ],
+          "positive_ratio": 0.12244898080825806,
+          "per_sample_positive_ratio": [
+            0.12244898080825806
+          ],
+          "foreground_ratio": 0.125,
+          "vanished_foreground_samples": 0,
+          "empty_boundary_samples": 0,
+          "high_coverage_samples": 0
+        },
+        {
+          "shape": [
+            1,
+            1,
+            14,
+            14,
+            10
+          ],
+          "positive_ratio": 0.2510204017162323,
+          "per_sample_positive_ratio": [
+            0.2510204017162323
+          ],
+          "foreground_ratio": 0.125,
+          "vanished_foreground_samples": 0,
+          "empty_boundary_samples": 0,
+          "high_coverage_samples": 0
+        },
+        {
+          "shape": [
+            1,
+            1,
+            7,
+            7,
+            5
+          ],
+          "positive_ratio": 0.5877550840377808,
+          "per_sample_positive_ratio": [
+            0.5877550840377808
+          ],
+          "foreground_ratio": 0.13061223924160004,
+          "vanished_foreground_samples": 0,
+          "empty_boundary_samples": 0,
+          "high_coverage_samples": 0
+        }
+      ]
+    },
+    "tests_run": 10,
+    "failures": 0,
+    "errors": 0,
+    "passed": true,
+    "torch_version": "2.9.1+cu126",
+    "cuda_available": false,
+    "note": "Validation persistence uses mocked metrics, not an evaluated accuracy result."
+  },
+  "target_audit": {
+    "dataset": "LA",
+    "labeled_percent": 10,
+    "labeled_cases": 8,
+    "crops_per_case": 2,
+    "summary": {
+      "112x112x80": [
+        {
+          "scale": 1,
+          "shape": "(112, 112, 80)",
+          "count": 16,
+          "positive_ratio_mean": 0.05121964425779879,
+          "positive_ratio_min": 0.032844386994838715,
+          "positive_ratio_max": 0.06671217083930969,
+          "vanished_foreground_count": 0,
+          "empty_boundary_count": 0,
+          "high_coverage_count": 0
+        },
+        {
+          "scale": 2,
+          "shape": "(56, 56, 40)",
+          "count": 16,
+          "positive_ratio_mean": 0.10112603660672903,
+          "positive_ratio_min": 0.06583227217197418,
+          "positive_ratio_max": 0.1314253807067871,
+          "vanished_foreground_count": 0,
+          "empty_boundary_count": 0,
+          "high_coverage_count": 0
+        },
+        {
+          "scale": 3,
+          "shape": "(28, 28, 20)",
+          "count": 16,
+          "positive_ratio_mean": 0.19328364171087742,
+          "positive_ratio_min": 0.13195152580738068,
+          "positive_ratio_max": 0.24821428954601288,
+          "vanished_foreground_count": 0,
+          "empty_boundary_count": 0,
+          "high_coverage_count": 0
+        },
+        {
+          "scale": 4,
+          "shape": "(14, 14, 10)",
+          "count": 16,
+          "positive_ratio_mean": 0.35054209269583225,
+          "positive_ratio_min": 0.2602040767669678,
+          "positive_ratio_max": 0.43622449040412903,
+          "vanished_foreground_count": 0,
+          "empty_boundary_count": 0,
+          "high_coverage_count": 0
+        },
+        {
+          "scale": 5,
+          "shape": "(7, 7, 5)",
+          "count": 16,
+          "positive_ratio_mean": 0.5617346912622452,
+          "positive_ratio_min": 0.37959182262420654,
+          "positive_ratio_max": 0.7755101919174194,
+          "vanished_foreground_count": 0,
+          "empty_boundary_count": 0,
+          "high_coverage_count": 0
+        }
+      ],
+      "96x96x96": [
+        {
+          "scale": 1,
+          "shape": "(96, 96, 96)",
+          "count": 16,
+          "positive_ratio_mean": 0.046088112401776016,
+          "positive_ratio_min": 0.027908889576792717,
+          "positive_ratio_max": 0.05959630757570267,
+          "vanished_foreground_count": 0,
+          "empty_boundary_count": 0,
+          "high_coverage_count": 0
+        },
+        {
+          "scale": 2,
+          "shape": "(48, 48, 48)",
+          "count": 16,
+          "positive_ratio_mean": 0.0909271240234375,
+          "positive_ratio_min": 0.05434389412403107,
+          "positive_ratio_max": 0.11814597994089127,
+          "vanished_foreground_count": 0,
+          "empty_boundary_count": 0,
+          "high_coverage_count": 0
+        },
+        {
+          "scale": 3,
+          "shape": "(24, 24, 24)",
+          "count": 16,
+          "positive_ratio_mean": 0.17441587056964636,
+          "positive_ratio_min": 0.1006944477558136,
+          "positive_ratio_max": 0.22280092537403107,
+          "vanished_foreground_count": 0,
+          "empty_boundary_count": 0,
+          "high_coverage_count": 0
+        },
+        {
+          "scale": 4,
+          "shape": "(12, 12, 12)",
+          "count": 16,
+          "positive_ratio_mean": 0.3228804962709546,
+          "positive_ratio_min": 0.1770833283662796,
+          "positive_ratio_max": 0.4288194477558136,
+          "vanished_foreground_count": 0,
+          "empty_boundary_count": 0,
+          "high_coverage_count": 0
+        },
+        {
+          "scale": 5,
+          "shape": "(6, 6, 6)",
+          "count": 16,
+          "positive_ratio_mean": 0.5454282406717539,
+          "positive_ratio_min": 0.27314814925193787,
+          "positive_ratio_max": 0.7037037014961243,
+          "vanished_foreground_count": 0,
+          "empty_boundary_count": 0,
+          "high_coverage_count": 0
+        }
+      ]
+    },
+    "train_list_sha256": "e88c3f0bae70edcca4bc16eca890673eee2bf3f7b74418249cb01b8cde2f924e",
+    "note": "Fixed seeded original crop/rotation/flip; 96-cube is a target diagnostic, not a new LA experiment."
+  },
+  "smoke_runs": {
+    "Boundary_A": {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/boundary_supervision_smoke/Boundary_A/seed_42/result_LA_10l/fold_0",
+      "status": {
+        "state": "completed",
+        "iteration": 2,
+        "boundary_mode": "deep",
+        "best_validation_dice": 0.18169149458603884
+      },
+      "training_steps": 2,
+      "validation_cases": 20,
+      "validation": {
+        "iteration": "2",
+        "dice": "0.18169149458603884",
+        "hd95": "56.231752483016315",
+        "asd": "27.811223105763567",
+        "iou": "0.10059792918524157",
+        "boundary_f1_1voxel": "0.042862077245757524"
+      },
+      "checkpoint_strict_load": true,
+      "note": "Two-step smoke metrics only; not evidence of experimental effectiveness."
+    },
+    "Boundary_B": {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/boundary_supervision_smoke/Boundary_B/seed_42/result_LA_10l/fold_0",
+      "status": {
+        "state": "completed",
+        "iteration": 2,
+        "boundary_mode": "local",
+        "best_validation_dice": 0.18170306242871032
+      },
+      "training_steps": 2,
+      "validation_cases": 20,
+      "validation": {
+        "iteration": "2",
+        "dice": "0.18170306242871032",
+        "hd95": "56.23885994790309",
+        "asd": "27.82390509066056",
+        "iou": "0.10060500730872594",
+        "boundary_f1_1voxel": "0.042757173876043095"
+      },
+      "checkpoint_strict_load": true,
+      "note": "Two-step smoke metrics only; not evidence of experimental effectiveness."
+    }
+  },
+  "formal_runs": {
+    "Boundary_A": {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0",
+      "status": {
+        "state": "training",
+        "iteration": 200,
+        "boundary_mode": "deep",
+        "total_loss": 0.22697283327579498
+      },
+      "coverage_observation": {
+        "iterations_observed": 200,
+        "labeled_samples": 400,
+        "scale5_high_coverage_samples": 13,
+        "scale5_empty_boundary_samples": 0,
+        "scale5_vanished_foreground_samples": 0
+      }
+    },
+    "Boundary_B": {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0",
+      "status": {
+        "state": "training",
+        "iteration": 200,
+        "boundary_mode": "local",
+        "total_loss": 0.23163357377052307
+      },
+      "coverage_observation": {
+        "iterations_observed": 200,
+        "labeled_samples": 400,
+        "scale5_high_coverage_samples": 13,
+        "scale5_empty_boundary_samples": 0,
+        "scale5_vanished_foreground_samples": 0
+      }
+    }
+  },
+  "smoke_comparison": {
+    "configuration_differences": [
+      "boundary_mode"
+    ],
+    "first_step_loss_absolute_differences": {
+      "supervised_loss": 5.960464477539063e-08,
+      "consistency_loss": 0.0,
+      "total_boundary_loss": 0.0,
+      "total_loss": 5.960464477539063e-08,
+      "boundary_loss_1": 0.0,
+      "boundary_loss_2": 0.0,
+      "boundary_loss_3": 0.0,
+      "boundary_loss_4": 0.0,
+      "boundary_loss_5": 0.0
+    },
+    "source_differences": [
+      "prediction.py"
+    ],
+    "source_difference_explanation": "prediction.py gained an optional metrics_json CLI argument between smoke launches; validation implementation is the same. Formal A/B uses one shared frozen snapshot."
+  },
+  "formal_comparison": {
+    "configuration_differences": [
+      "boundary_mode"
+    ],
+    "source_hashes_identical": true,
+    "same_initialization_verified_by_automated_tests": true,
+    "matching_target_ratio_iterations": 200
+  },
+  "unchanged_core_files": {
+    "model/vnet.py": true,
+    "utils/losses.py": true,
+    "dataloader/dataset.py": true,
+    "dataloader/TwoStreamBatchSampler.py": true,
+    "utils/transforms.py": true
+  },
+  "limitations": [
+    "No A/B effectiveness conclusion before full training and identical evaluation finish.",
+    "LA train-time validation continues to use baseline test.list.",
+    "Exact mid-epoch DataLoader/sampler resume is not implemented; model-only resume is rejected for boundary experiments.",
+    "Fixed 3x3x3 morphology makes coarse boundaries relatively thick; coverage is logged throughout training.",
+    "Formal random crops include occasional E5 coverage >=80%, unlike the 16 fixed audit crops; both modes log the same targets without unilateral changes."
+  ]
+}
