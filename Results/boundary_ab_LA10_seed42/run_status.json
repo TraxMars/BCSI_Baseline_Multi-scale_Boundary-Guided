@@ -1,8 +1,8 @@
 {
-  "state": "training",
+  "state": "completed",
   "jobs": {
     "deep": {
-      "state": "training",
+      "state": "completed",
       "pid": 2406895,
       "command": [
         "/aita_data/home/aita_duanxuelong/.conda/envs/SSL29/bin/python",
@@ -56,10 +56,38 @@
         "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results"
       ],
       "console_log": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/boundary_ab_LA10_seed42/deep_console.log",
-      "physical_gpu": "2"
+      "physical_gpu": "2",
+      "exit_code": 0,
+      "best_teacher": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/Model_iter_27600.pth",
+      "test_command": [
+        "/aita_data/home/aita_duanxuelong/.conda/envs/SSL29/bin/python",
+        "-u",
+        "prediction.py",
+        "--dataset",
+        "LA",
+        "--data_path",
+        "/aita_data/home/aita_duanxuelong/Dataset/LA",
+        "--patch_size",
+        "112",
+        "112",
+        "80",
+        "--model_path",
+        "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/Model_iter_27600.pth",
+        "--device",
+        "cuda:0",
+        "--metrics_json",
+        "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/test_metrics.json"
+      ],
+      "test_metrics": {
+        "dice": 0.8551337861001477,
+        "hd95": 10.86497330273545,
+        "asd": 2.8739108778913214,
+        "iou": 0.7532394592068474,
+        "boundary_f1_1voxel": 0.5030841559240425
+      }
     },
     "local": {
-      "state": "training",
+      "state": "completed",
       "pid": 2406896,
       "command": [
         "/aita_data/home/aita_duanxuelong/.conda/envs/SSL29/bin/python",
@@ -113,7 +141,35 @@
         "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results"
       ],
       "console_log": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/boundary_ab_LA10_seed42/local_console.log",
-      "physical_gpu": "3"
+      "physical_gpu": "3",
+      "exit_code": 0,
+      "best_teacher": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/Model_iter_27600.pth",
+      "test_command": [
+        "/aita_data/home/aita_duanxuelong/.conda/envs/SSL29/bin/python",
+        "-u",
+        "prediction.py",
+        "--dataset",
+        "LA",
+        "--data_path",
+        "/aita_data/home/aita_duanxuelong/Dataset/LA",
+        "--patch_size",
+        "112",
+        "112",
+        "80",
+        "--model_path",
+        "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/Model_iter_27600.pth",
+        "--device",
+        "cuda:0",
+        "--metrics_json",
+        "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/test_metrics.json"
+      ],
+      "test_metrics": {
+        "dice": 0.8736102770218507,
+        "hd95": 9.76539488326629,
+        "asd": 2.509254586790909,
+        "iou": 0.7788048148887075,
+        "boundary_f1_1voxel": 0.520975290176488
+      }
     }
   },
   "source_snapshot": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/boundary_ab_LA10_seed42/source_snapshot"

@@ -54,6 +54,10 @@ def main():
         state = formal / 'run_status.json'
         report['formal_runs'][name] = dict(path=str(formal), status=(
             json.loads(state.read_text()) if state.is_file() else {'state': 'not_started'}))
+        for metric_file in ('best_metrics.json', 'test_metrics.json'):
+            path = formal / metric_file
+            if path.is_file():
+                report['formal_runs'][name][path.stem] = json.loads(path.read_text())
         if (formal / 'experiment_config.json').is_file():
             formal_configs.append(json.loads((formal / 'experiment_config.json').read_text()))
         if (formal / 'training_metrics.csv').is_file():
@@ -98,7 +102,7 @@ def main():
     assert all(unchanged.values())
     report['unchanged_core_files'] = unchanged
     report['limitations'] = [
-        'No A/B effectiveness conclusion before full training and identical evaluation finish.',
+        'This A/B comparison uses one seed and one dataset; results do not establish multi-seed statistical significance.',
         'LA train-time validation continues to use baseline test.list.',
         'Exact mid-epoch DataLoader/sampler resume is not implemented; model-only resume is rejected for boundary experiments.',
         'Fixed 3x3x3 morphology makes coarse boundaries relatively thick; coverage is logged throughout training.',

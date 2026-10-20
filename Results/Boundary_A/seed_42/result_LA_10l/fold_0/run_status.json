@@ -1,6 +1,6 @@
 {
-  "state": "training",
-  "iteration": 10333,
+  "state": "completed",
+  "iteration": 30000,
   "boundary_mode": "deep",
-  "total_loss": 0.05157780647277832
+  "best_validation_dice": 0.8551337861001477
 }

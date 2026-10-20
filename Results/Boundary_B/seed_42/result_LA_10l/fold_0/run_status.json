@@ -1,5 +1,6 @@
 {
-  "state": "training",
-  "iteration": 10200,
+  "state": "completed",
+  "iteration": 30000,
   "boundary_mode": "local",
-  "total_loss": 0.047904133796691895
+  "best_validation_dice": 0.8736102770218507
+}

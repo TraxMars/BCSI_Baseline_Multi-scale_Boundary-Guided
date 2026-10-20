@@ -5,8 +5,22 @@
 `model/vnet.py` 完全不改；Teacher 仍是原始 VNet，最终验证、选优和推理均使用 Teacher。
 
 本次已通过 10 项自动化测试，A/B 均完成真实 GPU 上的两步训练和 20 例验证；
-LA 10% / seed 42 的两组正式 30000 次训练已在 GPU 2/3 启动，尚未完成。
-动态进度以各自 `run_status.json` 为准，不把 Smoke Test 指标当作正式效果。
+LA 10% / seed 42 的两组正式训练均已完成 30000 次迭代、150 次验证和最佳 Teacher 的最终测试。
+完成状态见各自 `run_status.json`，以下结果来自正式实验的 `test_metrics.json`，不使用 Smoke Test 指标。
+
+## 最新正式结果（2026-10-20 核对）
+
+| 实验 | 模式 | 最佳迭代 | Dice ↑ | HD95 ↓ | ASD ↓ | IoU ↑ | Boundary F1 ↑ |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| A | deep | 27600 | 0.855134 | 10.864973 | 2.873911 | 0.753239 | 0.503084 |
+| B | local | 27600 | 0.873610 | 9.765395 | 2.509255 | 0.778805 | 0.520975 |
+
+本次单 seed 对照中，B 的 Dice 比 A 高约 1.85 个百分点，其余四项指标也更好。
+LA 的训练期验证与最终测试沿用同一 `test.list`，这不是独立测试集上的泛化结论；
+仍需更多 seed / 数据集验证。汇总见
+[`Results/boundary_ab_LA10_seed42/summary.csv`](../../Results/boundary_ab_LA10_seed42/summary.csv)，
+原始指标分别位于 `Results/Boundary_A` 和 `Results/Boundary_B`。
+上传遵循仓库 `.gitignore`：日志、CSV、JSON、源码保留，模型权重、数据及生成图片不纳入 Git。
 
 ## 实现与梯度
 
@@ -226,4 +240,4 @@ gradient_i, = torch.autograd.grad(boundary_losses[i], result.features[i], retain
 编辑前参照、验证报告和标签可视化。`model/vnet.py`、`utils/losses.py`、
 数据加载/增强/采样代码均保持不变。仓库原有未提交改动和旧结果保持原状。
 
-尚未得出 A/B 性能优劣结论；必须等正式训练与相同评估完成后才能比较。
+首轮完整对照的结果见本文顶部；该单 seed 结果不代表多 seed 的统计结论。
