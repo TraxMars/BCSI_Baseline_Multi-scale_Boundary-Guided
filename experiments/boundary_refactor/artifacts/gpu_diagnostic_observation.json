@@ -1,0 +1,409 @@
+{
+  "date": "2026-10-20",
+  "purpose": "Same-graph post-backward observational diagnostic non-mutation",
+  "torch_version": "2.9.1+cu126",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "patch_size": [
+    112,
+    112,
+    80
+  ],
+  "batch_size": 4,
+  "labeled_bs": 2,
+  "input_records": [
+    {
+      "train_index": 0,
+      "augmentation_seed": 42,
+      "labeled": true,
+      "case_path": "/aita_data/home/aita_duanxuelong/Dataset/LA/2018LA_Seg_TrainingSet/06SR5RBREL16DQ6M8LWS/mri_norm2.h5",
+      "image_sha256": "005a9f2f792e19589244fd7d42b0b53de9a0bdd8b6ba92f80de6a98e88a53b4a",
+      "label_sha256": "b35d716070bbccb0d57645684e9c4b8ae51117af3e64628c31ff1b33be5bd217"
+    },
+    {
+      "train_index": 1,
+      "augmentation_seed": 43,
+      "labeled": true,
+      "case_path": "/aita_data/home/aita_duanxuelong/Dataset/LA/2018LA_Seg_TrainingSet/0RZDK210BSMWAA6467LU/mri_norm2.h5",
+      "image_sha256": "578af14a2c22193f7f437aa49d51a9b28ea136b3837b7e9a6b354c4fbbe2b998",
+      "label_sha256": "1e8ddd740e2c8a65d53149cb059d2a5374ebae4e7f3f0ce1cd11cd670053888a"
+    },
+    {
+      "train_index": 8,
+      "augmentation_seed": 44,
+      "labeled": false,
+      "case_path": "/aita_data/home/aita_duanxuelong/Dataset/LA/2018LA_Seg_TrainingSet/3C2QTUNI0852XV7ZH4Q1/mri_norm2.h5",
+      "image_sha256": "06a5ff98874e027f1c727dc563943a3ddca75a3968cdb4fb7528452e69417127",
+      "label_sha256": "550a3f20b365aaa89bb7aface58a5dbdee5b2e90e24cc0f7572307d7c3735266"
+    },
+    {
+      "train_index": 9,
+      "augmentation_seed": 45,
+      "labeled": false,
+      "case_path": "/aita_data/home/aita_duanxuelong/Dataset/LA/2018LA_Seg_TrainingSet/3DA0T2V6JJ2NLUAV6FWM/mri_norm2.h5",
+      "image_sha256": "a91484d6e8f504b385b0acb3cfb02f532b54a57928b7b670a6274ea53b738ebb",
+      "label_sha256": "f37a12ae163886bbe06e8ef44564414ca6692a906827878fcc408ed1d389b51a"
+    }
+  ],
+  "optimizer_updates": 0,
+  "scheduler_updates": 0,
+  "ema_updates": 0,
+  "source_sha256": {
+    "trainer.py": "3572cb319586ee9215e41711b461469297a24871ce32f14e4f991a30eadff96c",
+    "utils/gradient_diagnostics.py": "f92770907214366ce4b0a2a4f5f68f45562af6e6a15bfed002d72e982ef29f39",
+    "utils/bfa_supervision.py": "edeb54e8c1f1dd17a2b5c555b27f4a43e5630cac469fae387379958d6df7abc3"
+  },
+  "modes": {
+    "bfa_deep": {
+      "actual_gradient_tensors": 134,
+      "actual_gradients_finite": true,
+      "head_gradients_present": true,
+      "comparison": {
+        "bitwise_equal": true,
+        "within_tolerance": true,
+        "max_abs_error": 0,
+        "compared_leaves": 838,
+        "unequal_leaves": [],
+        "outside_tolerance": [],
+        "groups": {
+          "student": {
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs_error": 0
+          },
+          "teacher": {
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs_error": 0
+          },
+          "heads": {
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs_error": 0
+          },
+          "gradients": {
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs_error": 0
+          },
+          "momentum": {
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs_error": 0
+          },
+          "teacher_gradients": {
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs_error": 0
+          },
+          "cpu_rng": {
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs_error": 0
+          },
+          "cuda_rng": {
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs_error": 0
+          },
+          "scheduler": {
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs_error": 0
+          }
+        }
+      },
+      "diagnostics": [
+        {
+          "stage": 1,
+          "main_norm": 1.1320407346314367,
+          "boundary_norm": 0.0033007794367308045,
+          "ratio": 0.002915777971369072,
+          "cosine": -0.4834003433192494,
+          "opposite": true,
+          "reverse": false,
+          "status": "ok",
+          "main_parameters_with_gradient": 4,
+          "boundary_parameters_with_gradient": 4,
+          "raw_boundary_norm": 0.0033007794367308045,
+          "raw_ratio": 0.002915777971369072,
+          "raw_cosine": -0.4834003433192494,
+          "raw_status": "ok",
+          "boundary_contribution": "ordinary",
+          "boundary_weight": 0.1,
+          "cosine_threshold": -0.2,
+          "ratio_threshold": 0.1
+        },
+        {
+          "stage": 2,
+          "main_norm": 0.7040199904116313,
+          "boundary_norm": 0.010706859577035932,
+          "ratio": 0.015208175510436529,
+          "cosine": -0.159117174841993,
+          "opposite": true,
+          "reverse": false,
+          "status": "ok",
+          "main_parameters_with_gradient": 12,
+          "boundary_parameters_with_gradient": 12,
+          "raw_boundary_norm": 0.010706859577035932,
+          "raw_ratio": 0.015208175510436529,
+          "raw_cosine": -0.159117174841993,
+          "raw_status": "ok",
+          "boundary_contribution": "ordinary",
+          "boundary_weight": 0.1,
+          "cosine_threshold": -0.2,
+          "ratio_threshold": 0.1
+        },
+        {
+          "stage": 3,
+          "main_norm": 0.11357741186387403,
+          "boundary_norm": 0.009343810799789324,
+          "ratio": 0.0822682137799386,
+          "cosine": -0.024024802585056456,
+          "opposite": true,
+          "reverse": false,
+          "status": "ok",
+          "main_parameters_with_gradient": 16,
+          "boundary_parameters_with_gradient": 16,
+          "raw_boundary_norm": 0.009343810799789324,
+          "raw_ratio": 0.0822682137799386,
+          "raw_cosine": -0.024024802585056456,
+          "raw_status": "ok",
+          "boundary_contribution": "ordinary",
+          "boundary_weight": 0.1,
+          "cosine_threshold": -0.2,
+          "ratio_threshold": 0.1
+        },
+        {
+          "stage": 4,
+          "main_norm": 0.04523063216882909,
+          "boundary_norm": 0.008341283113079858,
+          "ratio": 0.18441668208273007,
+          "cosine": -0.004540098471281013,
+          "opposite": true,
+          "reverse": false,
+          "status": "ok",
+          "main_parameters_with_gradient": 16,
+          "boundary_parameters_with_gradient": 16,
+          "raw_boundary_norm": 0.008341283113079858,
+          "raw_ratio": 0.18441668208273007,
+          "raw_cosine": -0.004540098471281013,
+          "raw_status": "ok",
+          "boundary_contribution": "ordinary",
+          "boundary_weight": 0.1,
+          "cosine_threshold": -0.2,
+          "ratio_threshold": 0.1
+        },
+        {
+          "stage": 5,
+          "main_norm": 0.02784927462240065,
+          "boundary_norm": 0.0,
+          "ratio": 0.0,
+          "cosine": null,
+          "opposite": false,
+          "reverse": false,
+          "status": "missing_boundary_gradient",
+          "main_parameters_with_gradient": 16,
+          "boundary_parameters_with_gradient": 0,
+          "raw_boundary_norm": 0.0,
+          "raw_ratio": 0.0,
+          "raw_cosine": null,
+          "raw_status": "missing_boundary_gradient",
+          "boundary_contribution": "ordinary",
+          "boundary_weight": 0.1,
+          "cosine_threshold": -0.2,
+          "ratio_threshold": 0.1
+        }
+      ],
+      "losses": {
+        "main_MT": 0.9173101186752319,
+        "boundary": 0.7534332871437073,
+        "total": 0.9926534295082092
+      },
+      "calls": {
+        "optimizer_step_attempts_intercepted": 1,
+        "actual_optimizer_updates": 0,
+        "scheduler_step": 0,
+        "ema_update": 0,
+        "diagnostic_calls": 1
+      },
+      "passed": true
+    },
+    "bfa_local": {
+      "actual_gradient_tensors": 134,
+      "actual_gradients_finite": true,
+      "head_gradients_present": true,
+      "comparison": {
+        "bitwise_equal": true,
+        "within_tolerance": true,
+        "max_abs_error": 0,
+        "compared_leaves": 838,
+        "unequal_leaves": [],
+        "outside_tolerance": [],
+        "groups": {
+          "student": {
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs_error": 0
+          },
+          "teacher": {
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs_error": 0
+          },
+          "heads": {
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs_error": 0
+          },
+          "gradients": {
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs_error": 0
+          },
+          "momentum": {
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs_error": 0
+          },
+          "teacher_gradients": {
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs_error": 0
+          },
+          "cpu_rng": {
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs_error": 0
+          },
+          "cuda_rng": {
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs_error": 0
+          },
+          "scheduler": {
+            "bitwise_equal": true,
+            "within_tolerance": true,
+            "max_abs_error": 0
+          }
+        }
+      },
+      "diagnostics": [
+        {
+          "stage": 1,
+          "main_norm": 1.1320407346314367,
+          "boundary_norm": 0.003226969048873621,
+          "ratio": 0.0028505767947689963,
+          "cosine": -0.20631294113920087,
+          "opposite": true,
+          "reverse": false,
+          "status": "ok",
+          "main_parameters_with_gradient": 4,
+          "boundary_parameters_with_gradient": 4,
+          "raw_boundary_norm": 0.003301570974515815,
+          "raw_ratio": 0.0029164771845341074,
+          "raw_cosine": -0.4836585740313561,
+          "raw_status": "ok",
+          "boundary_contribution": "routed",
+          "boundary_weight": 0.1,
+          "cosine_threshold": -0.2,
+          "ratio_threshold": 0.1
+        },
+        {
+          "stage": 2,
+          "main_norm": 0.7040199904116313,
+          "boundary_norm": 0.00586308303399132,
+          "ratio": 0.008328006468343679,
+          "cosine": -0.16557980006919648,
+          "opposite": true,
+          "reverse": false,
+          "status": "ok",
+          "main_parameters_with_gradient": 12,
+          "boundary_parameters_with_gradient": 12,
+          "raw_boundary_norm": 0.01070647236475071,
+          "raw_ratio": 0.015207625508603492,
+          "raw_cosine": -0.15912921983125342,
+          "raw_status": "ok",
+          "boundary_contribution": "routed",
+          "boundary_weight": 0.1,
+          "cosine_threshold": -0.2,
+          "ratio_threshold": 0.1
+        },
+        {
+          "stage": 3,
+          "main_norm": 0.11357741186387403,
+          "boundary_norm": 0.005161011237944434,
+          "ratio": 0.045440472302098786,
+          "cosine": -0.11692261352064075,
+          "opposite": true,
+          "reverse": false,
+          "status": "ok",
+          "main_parameters_with_gradient": 16,
+          "boundary_parameters_with_gradient": 16,
+          "raw_boundary_norm": 0.009343970576641946,
+          "raw_ratio": 0.0822696205460376,
+          "raw_cosine": -0.02403315674611969,
+          "raw_status": "ok",
+          "boundary_contribution": "routed",
+          "boundary_weight": 0.1,
+          "cosine_threshold": -0.2,
+          "ratio_threshold": 0.1
+        },
+        {
+          "stage": 4,
+          "main_norm": 0.04523063216882909,
+          "boundary_norm": 0.008341303614289834,
+          "ratio": 0.18441713534214726,
+          "cosine": -0.004538197412241195,
+          "opposite": true,
+          "reverse": false,
+          "status": "ok",
+          "main_parameters_with_gradient": 16,
+          "boundary_parameters_with_gradient": 16,
+          "raw_boundary_norm": 0.008341292791445864,
+          "raw_ratio": 0.1844168960608582,
+          "raw_cosine": -0.00453750558666282,
+          "raw_status": "ok",
+          "boundary_contribution": "routed",
+          "boundary_weight": 0.1,
+          "cosine_threshold": -0.2,
+          "ratio_threshold": 0.1
+        },
+        {
+          "stage": 5,
+          "main_norm": 0.02784927462240065,
+          "boundary_norm": 0.0,
+          "ratio": 0.0,
+          "cosine": null,
+          "opposite": false,
+          "reverse": false,
+          "status": "missing_boundary_gradient",
+          "main_parameters_with_gradient": 16,
+          "boundary_parameters_with_gradient": 0,
+          "raw_boundary_norm": 0.0,
+          "raw_ratio": 0.0,
+          "raw_cosine": null,
+          "raw_status": "missing_boundary_gradient",
+          "boundary_contribution": "routed",
+          "boundary_weight": 0.1,
+          "cosine_threshold": -0.2,
+          "ratio_threshold": 0.1
+        }
+      ],
+      "losses": {
+        "main_MT": 0.9173101186752319,
+        "boundary": 0.7534332871437073,
+        "total": 0.9926534295082092
+      },
+      "calls": {
+        "optimizer_step_attempts_intercepted": 1,
+        "actual_optimizer_updates": 0,
+        "scheduler_step": 0,
+        "ema_update": 0,
+        "diagnostic_calls": 1
+      },
+      "passed": true
+    }
+  },
+  "passed": true,
+  "interpretation": "Only mutation of the SAME existing gradients/state/RNG is tested. This result does not erase the separate strict cross-run CUDA invariance failure, and does not assert that all cross-run differences have one confirmed cause."
+}

@@ -1,0 +1,483 @@
+{
+  "generated_at": "2026-10-20T15:17:29.597898+08:00",
+  "base_commit": "995c354661da83a8b886d499a02ab98f7cd550ee",
+  "development_branch": "experiment/bfa-a2-b2-decoder-ds",
+  "tests": {
+    "synthetic_boundary_tests": {
+      "tests_run": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true
+    },
+    "synthetic_decoder_tests": {
+      "tests_run": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true
+    },
+    "legacy_mode_regression": {
+      "tests_run": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "passed": true
+    }
+  },
+  "smoke": {
+    "BFA_Deep_A2": {
+      "path": "Results/refactor_smoke_postdiag_20261020/BFA_Deep_A2/seed_42/result_LA_10l/fold_0",
+      "status": {
+        "state": "completed",
+        "iteration": 2,
+        "boundary_mode": "bfa_deep",
+        "auxiliary_mode": "none",
+        "best_validation_dice": 0.1816993941732838
+      },
+      "train_iterations": 2,
+      "validation_cases": 20,
+      "validation": {
+        "iteration": "2",
+        "dice": "0.1816993941732838",
+        "hd95": "56.237203650549574",
+        "asd": "27.819736358222286",
+        "iou": "0.10060279031913133",
+        "boundary_f1_1voxel": "0.0427946487348246"
+      },
+      "teacher_checkpoint_strict_load": true,
+      "data_evaluation": {
+        "validation_list": "/aita_data/home/aita_duanxuelong/Dataset/LA/test.list",
+        "validation_sha256": "e55b18069e27d6eab3dc21b8d1dc05a99ef83110fedc789f81c461d7bb152199",
+        "test_list": "/aita_data/home/aita_duanxuelong/Dataset/LA/test.list",
+        "test_sha256": "e55b18069e27d6eab3dc21b8d1dc05a99ef83110fedc789f81c461d7bb152199",
+        "validation_test_same_list": true
+      },
+      "source_snapshots_verified": true,
+      "note": "Smoke metrics test the pipeline only; they are not formal experimental results."
+    },
+    "BFA_Local_B2": {
+      "path": "Results/refactor_smoke_postdiag_20261020/BFA_Local_B2/seed_42/result_LA_10l/fold_0",
+      "status": {
+        "state": "completed",
+        "iteration": 2,
+        "boundary_mode": "bfa_local",
+        "auxiliary_mode": "none",
+        "best_validation_dice": 0.181700972765946
+      },
+      "train_iterations": 2,
+      "validation_cases": 20,
+      "validation": {
+        "iteration": "2",
+        "dice": "0.181700972765946",
+        "hd95": "56.238316665391075",
+        "asd": "27.821275956146216",
+        "iou": "0.10060373340582311",
+        "boundary_f1_1voxel": "0.042782973584263986"
+      },
+      "teacher_checkpoint_strict_load": true,
+      "data_evaluation": {
+        "validation_list": "/aita_data/home/aita_duanxuelong/Dataset/LA/test.list",
+        "validation_sha256": "e55b18069e27d6eab3dc21b8d1dc05a99ef83110fedc789f81c461d7bb152199",
+        "test_list": "/aita_data/home/aita_duanxuelong/Dataset/LA/test.list",
+        "test_sha256": "e55b18069e27d6eab3dc21b8d1dc05a99ef83110fedc789f81c461d7bb152199",
+        "validation_test_same_list": true
+      },
+      "source_snapshots_verified": true,
+      "note": "Smoke metrics test the pipeline only; they are not formal experimental results."
+    },
+    "Decoder_DS_C": {
+      "path": "Results/refactor_smoke_20261020/Decoder_DS_C/seed_42/result_LA_10l/fold_0",
+      "status": {
+        "state": "completed",
+        "iteration": 2,
+        "boundary_mode": "none",
+        "auxiliary_mode": "decoder_deep_seg",
+        "best_validation_dice": 0.18170564386829563
+      },
+      "train_iterations": 2,
+      "validation_cases": 20,
+      "validation": {
+        "iteration": "2",
+        "dice": "0.18170564386829563",
+        "hd95": "56.23240330168117",
+        "asd": "27.815812339487582",
+        "iou": "0.10060653855251163",
+        "boundary_f1_1voxel": "0.04281383039115437"
+      },
+      "teacher_checkpoint_strict_load": true,
+      "data_evaluation": {
+        "validation_list": "/aita_data/home/aita_duanxuelong/Dataset/LA/test.list",
+        "validation_sha256": "e55b18069e27d6eab3dc21b8d1dc05a99ef83110fedc789f81c461d7bb152199",
+        "test_list": "/aita_data/home/aita_duanxuelong/Dataset/LA/test.list",
+        "test_sha256": "e55b18069e27d6eab3dc21b8d1dc05a99ef83110fedc789f81c461d7bb152199",
+        "validation_test_same_list": true
+      },
+      "source_snapshots_verified": true,
+      "note": "Smoke metrics test the pipeline only; they are not formal experimental results."
+    }
+  },
+  "formal_training_started": false,
+  "tests_run": 34,
+  "gpu_diagnostic_invariance": {
+    "passed": false,
+    "bitwise_equal": false,
+    "rtol": 1e-05,
+    "atol": 1e-07,
+    "evidence": "artifacts/gpu_diagnostic_invariance.json"
+  },
+  "gpu_diagnostic_observation": {
+    "passed": true,
+    "optimizer_updates": 0,
+    "modes": {
+      "bfa_deep": true,
+      "bfa_local": true
+    },
+    "evidence": "artifacts/gpu_diagnostic_observation.json"
+  },
+  "gpu_trilinear_reproducibility": {
+    "purpose": "Zero optimizer updates; repeated backward of the SAME required trilinear interpolation graph",
+    "gpu": "NVIDIA A100-SXM4-40GB",
+    "torch_version": "2.9.1+cu126",
+    "optimizer_updates": 0,
+    "cuda_same_graph_repeats": [
+      {
+        "bitwise_equal": false,
+        "within_tolerance": false,
+        "max_abs_error": 8.96453857421875e-05,
+        "compared_leaves": 1,
+        "unequal_leaves": [
+          {
+            "path": "state.gradient",
+            "bitwise_equal": false,
+            "within_tolerance": false,
+            "max_abs_error": 8.96453857421875e-05,
+            "finite": true
+          }
+        ],
+        "outside_tolerance": [
+          {
+            "path": "state.gradient",
+            "bitwise_equal": false,
+            "within_tolerance": false,
+            "max_abs_error": 8.96453857421875e-05,
+            "finite": true
+          }
+        ],
+        "groups": {
+          "gradient": {
+            "bitwise_equal": false,
+            "within_tolerance": false,
+            "max_abs_error": 8.96453857421875e-05
+          }
+        }
+      },
+      {
+        "bitwise_equal": false,
+        "within_tolerance": false,
+        "max_abs_error": 0.000110626220703125,
+        "compared_leaves": 1,
+        "unequal_leaves": [
+          {
+            "path": "state.gradient",
+            "bitwise_equal": false,
+            "within_tolerance": false,
+            "max_abs_error": 0.000110626220703125,
+            "finite": true
+          }
+        ],
+        "outside_tolerance": [
+          {
+            "path": "state.gradient",
+            "bitwise_equal": false,
+            "within_tolerance": false,
+            "max_abs_error": 0.000110626220703125,
+            "finite": true
+          }
+        ],
+        "groups": {
+          "gradient": {
+            "bitwise_equal": false,
+            "within_tolerance": false,
+            "max_abs_error": 0.000110626220703125
+          }
+        }
+      },
+      {
+        "bitwise_equal": false,
+        "within_tolerance": false,
+        "max_abs_error": 0.000118255615234375,
+        "compared_leaves": 1,
+        "unequal_leaves": [
+          {
+            "path": "state.gradient",
+            "bitwise_equal": false,
+            "within_tolerance": false,
+            "max_abs_error": 0.000118255615234375,
+            "finite": true
+          }
+        ],
+        "outside_tolerance": [
+          {
+            "path": "state.gradient",
+            "bitwise_equal": false,
+            "within_tolerance": false,
+            "max_abs_error": 0.000118255615234375,
+            "finite": true
+          }
+        ],
+        "groups": {
+          "gradient": {
+            "bitwise_equal": false,
+            "within_tolerance": false,
+            "max_abs_error": 0.000118255615234375
+          }
+        }
+      }
+    ],
+    "cuda_bitwise_equal": false,
+    "cpu_same_graph_bitwise_equal": true,
+    "strict_deterministic_backward_supported": false,
+    "strict_deterministic_error": "upsample_trilinear3d_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True)'. You can turn off determinism just for this operation, or you can use the 'warn_only=True' option, if that's acceptable for your application. You can also file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation.",
+    "source_note": "Installed torch/__init__.py lines1391-1397 and nn/functional.py line4605 document nondeterministic CUDA trilinear backward.",
+    "conclusion": "This probe can confirm an operator-level reproducibility limitation; it does not prove that every whole-model on/off difference is caused by this operator."
+  },
+  "limitations": [
+    "Strict cross-run GPU diagnostic on/off comparison failed its original tolerances; retained without relaxation.",
+    "CUDA trilinear backward is empirically nondeterministic; strict deterministic algorithms reject it.",
+    "The observed operator nondeterminism is not proof of the cause of every cross-run discrepancy.",
+    "LA validation and final test reuse the same original test.list; no independent test split.",
+    "Formal A2/B2/C training and efficacy comparisons have not been performed."
+  ],
+  "final_source_vs_completed_smoke": {
+    "train.py": {
+      "byte_identical": false,
+      "ast_identical": true
+    },
+    "trainer.py": {
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "prediction.py": {
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "model/vnet.py": {
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "utils/boundary_supervision.py": {
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "utils/bfa_supervision.py": {
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "utils/decoder_supervision.py": {
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "utils/gradient_diagnostics.py": {
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "utils/losses.py": {
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "utils/utils.py": {
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "utils/transforms.py": {
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "dataloader/dataset.py": {
+      "byte_identical": true,
+      "ast_identical": true
+    },
+    "dataloader/TwoStreamBatchSampler.py": {
+      "byte_identical": true,
+      "ast_identical": true
+    }
+  },
+  "AB_fairness": {
+    "configuration_differences": [
+      "device",
+      "boundary_mode"
+    ],
+    "scientific_configuration_differences": [
+      "boundary_mode"
+    ],
+    "device_placement": {
+      "A2": "cuda:5",
+      "B2": "cuda:3"
+    },
+    "source_hashes_identical": true,
+    "data_manifests_identical": true,
+    "initial_forward_exactly_equal": "verified in CPU synthetic tests"
+  },
+  "C_independent": {
+    "boundary_mode": "none",
+    "final_loss_count": 1,
+    "final_weight": 1,
+    "side_count": 3,
+    "side_total_weight": 0.1,
+    "nonboundary_trainer_and_vnet_math_identical_across_smokes": true,
+    "source_note": "C smoke preceded boundary-only post-backward diagnostic timing change; C code path unchanged."
+  },
+  "gradient_diagnostics": {
+    "BFA_Deep_A2": [
+      {
+        "stage": 1,
+        "samples": 2,
+        "main_norm_mean": 1.9424102461067396,
+        "weighted_boundary_norm_mean": 0.006021589152279667,
+        "ratio_mean": 0.0034018270463334393,
+        "cosine_mean": -0.49136016593459897,
+        "opposite_count": 2,
+        "significant_reverse_count": 0,
+        "raw_boundary_norm_mean": 0.006021589152279667,
+        "statuses": [
+          "ok"
+        ]
+      },
+      {
+        "stage": 2,
+        "samples": 2,
+        "main_norm_mean": 1.0123972637779066,
+        "weighted_boundary_norm_mean": 0.010784129683120442,
+        "ratio_mean": 0.010653604227626021,
+        "cosine_mean": 0.051563291299193736,
+        "opposite_count": 1,
+        "significant_reverse_count": 0,
+        "raw_boundary_norm_mean": 0.010784129683120442,
+        "statuses": [
+          "ok"
+        ]
+      },
+      {
+        "stage": 3,
+        "samples": 2,
+        "main_norm_mean": 0.1343107046521586,
+        "weighted_boundary_norm_mean": 0.010687647764695798,
+        "ratio_mean": 0.07966762732780747,
+        "cosine_mean": -0.045098607089721174,
+        "opposite_count": 1,
+        "significant_reverse_count": 0,
+        "raw_boundary_norm_mean": 0.010687647764695798,
+        "statuses": [
+          "ok"
+        ]
+      },
+      {
+        "stage": 4,
+        "samples": 2,
+        "main_norm_mean": 0.04711450065129921,
+        "weighted_boundary_norm_mean": 0.008883964306409968,
+        "ratio_mean": 0.188762770372856,
+        "cosine_mean": -0.0032535516531045213,
+        "opposite_count": 2,
+        "significant_reverse_count": 0,
+        "raw_boundary_norm_mean": 0.008883964306409968,
+        "statuses": [
+          "ok"
+        ]
+      },
+      {
+        "stage": 5,
+        "samples": 2,
+        "main_norm_mean": 0.02677787055146453,
+        "weighted_boundary_norm_mean": 0.0,
+        "ratio_mean": 0.0,
+        "cosine_mean": null,
+        "opposite_count": 0,
+        "significant_reverse_count": 0,
+        "raw_boundary_norm_mean": 0.0,
+        "statuses": [
+          "missing_boundary_gradient"
+        ]
+      }
+    ],
+    "BFA_Local_B2": [
+      {
+        "stage": 1,
+        "samples": 2,
+        "main_norm_mean": 1.941826798638414,
+        "weighted_boundary_norm_mean": 0.004522579454137533,
+        "ratio_mean": 0.0025876148568481938,
+        "cosine_mean": -0.455413339039203,
+        "opposite_count": 2,
+        "significant_reverse_count": 0,
+        "raw_boundary_norm_mean": 0.006106194056538937,
+        "statuses": [
+          "ok"
+        ]
+      },
+      {
+        "stage": 2,
+        "samples": 2,
+        "main_norm_mean": 1.0117944281632312,
+        "weighted_boundary_norm_mean": 0.006441729132204913,
+        "ratio_mean": 0.006369938833635509,
+        "cosine_mean": -0.07406959269464067,
+        "opposite_count": 1,
+        "significant_reverse_count": 0,
+        "raw_boundary_norm_mean": 0.010791861192987081,
+        "statuses": [
+          "ok"
+        ]
+      },
+      {
+        "stage": 3,
+        "samples": 2,
+        "main_norm_mean": 0.13440939989437778,
+        "weighted_boundary_norm_mean": 0.007209829976900615,
+        "ratio_mean": 0.053071055858405665,
+        "cosine_mean": -0.08307283798308271,
+        "opposite_count": 1,
+        "significant_reverse_count": 0,
+        "raw_boundary_norm_mean": 0.010671116604493616,
+        "statuses": [
+          "ok"
+        ]
+      },
+      {
+        "stage": 4,
+        "samples": 2,
+        "main_norm_mean": 0.04704336651634859,
+        "weighted_boundary_norm_mean": 0.008870608913039903,
+        "ratio_mean": 0.18875967999393267,
+        "cosine_mean": -0.0034805826594200926,
+        "opposite_count": 2,
+        "significant_reverse_count": 0,
+        "raw_boundary_norm_mean": 0.008870614083813295,
+        "statuses": [
+          "ok"
+        ]
+      },
+      {
+        "stage": 5,
+        "samples": 2,
+        "main_norm_mean": 0.02678205440100992,
+        "weighted_boundary_norm_mean": 0.0,
+        "ratio_mean": 0.0,
+        "cosine_mean": null,
+        "opposite_count": 0,
+        "significant_reverse_count": 0,
+        "raw_boundary_norm_mean": 0.0,
+        "statuses": [
+          "missing_boundary_gradient"
+        ]
+      }
+    ]
+  },
+  "historical_artifacts_unchanged": {
+    "checked_files": 18,
+    "passed": true
+  },
+  "required_automated_tests_passed": true,
+  "status": "completed_with_disclosed_gpu_reproducibility_limitation"
+}

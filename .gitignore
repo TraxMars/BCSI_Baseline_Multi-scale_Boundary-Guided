@@ -35,3 +35,6 @@ events.out.tfevents.*
 *.zip
 *.tar
 *.tar.gz
+
+# Reviewable fixed-patch boundary audit figures for this experiment only
+!experiments/boundary_refactor/artifacts/label_audit_seed42/label_audit_*.png

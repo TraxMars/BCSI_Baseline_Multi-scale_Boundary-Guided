@@ -1,0 +1,447 @@
+{
+  "audit_date": "2026-10-20",
+  "audit_scope": "Read-only audit of existing MT and legacy five-scale boundary experiments; new implementations not assessed here.",
+  "source_root": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided",
+  "baseline_root": "/aita_data/home/aita_duanxuelong/BCSI_Baseline",
+  "runs": {
+    "Boundary_A": {
+      "row_count": 30000,
+      "first_logged_iteration": 0,
+      "last_logged_iteration": 29999,
+      "status": {
+        "state": "completed",
+        "iteration": 30000,
+        "boundary_mode": "deep",
+        "best_validation_dice": 0.8551337861001477
+      },
+      "best_metrics": {
+        "iteration": 27600,
+        "dice": 0.8551337861001477,
+        "hd95": 10.86497330273545,
+        "asd": 2.8739108778913214,
+        "iou": 0.7532394592068474,
+        "boundary_f1_1voxel": 0.5030841559240425
+      },
+      "test_metrics": {
+        "dice": 0.8551337861001477,
+        "hd95": 10.86497330273545,
+        "asd": 2.8739108778913214,
+        "iou": 0.7532394592068474,
+        "boundary_f1_1voxel": 0.5030841559240425
+      },
+      "boundary_statistics": [
+        {
+          "stage": 1,
+          "shape": [
+            2,
+            1,
+            112,
+            112,
+            80
+          ],
+          "mean_positive_ratio": 0.05011574279802541,
+          "batch_min_positive_ratio": 0.028759267181158066,
+          "batch_max_positive_ratio": 0.06729163229465485,
+          "sample_min_positive_ratio": 0.024060307070612907,
+          "sample_max_positive_ratio": 0.06879284977912903,
+          "mean_foreground_ratio": 0.15126876525953412,
+          "sample_count": 60000,
+          "sample_count_ge_0p8": 0,
+          "iteration_count_with_ge_0p8_sample": 0,
+          "empty_boundary_sample_count": 0,
+          "vanished_foreground_sample_count": 0
+        },
+        {
+          "stage": 2,
+          "shape": [
+            2,
+            1,
+            56,
+            56,
+            40
+          ],
+          "mean_positive_ratio": 0.09907703689100841,
+          "batch_min_positive_ratio": 0.05648915469646454,
+          "batch_max_positive_ratio": 0.13317522406578064,
+          "sample_min_positive_ratio": 0.04799904301762581,
+          "sample_max_positive_ratio": 0.13669483363628387,
+          "mean_foreground_ratio": 0.15122219272802273,
+          "sample_count": 60000,
+          "sample_count_ge_0p8": 0,
+          "iteration_count_with_ge_0p8_sample": 0,
+          "empty_boundary_sample_count": 0,
+          "vanished_foreground_sample_count": 0
+        },
+        {
+          "stage": 3,
+          "shape": [
+            2,
+            1,
+            28,
+            28,
+            20
+          ],
+          "mean_positive_ratio": 0.19046686132724086,
+          "batch_min_positive_ratio": 0.1090880036354065,
+          "batch_max_positive_ratio": 0.2538265287876129,
+          "sample_min_positive_ratio": 0.09017856419086456,
+          "sample_max_positive_ratio": 0.265433669090271,
+          "mean_foreground_ratio": 0.1510896012785534,
+          "sample_count": 60000,
+          "sample_count_ge_0p8": 0,
+          "iteration_count_with_ge_0p8_sample": 0,
+          "empty_boundary_sample_count": 0,
+          "vanished_foreground_sample_count": 0
+        },
+        {
+          "stage": 4,
+          "shape": [
+            2,
+            1,
+            14,
+            14,
+            10
+          ],
+          "mean_positive_ratio": 0.34919961924205223,
+          "batch_min_positive_ratio": 0.19668366014957428,
+          "batch_max_positive_ratio": 0.46785712242126465,
+          "sample_min_positive_ratio": 0.15459182858467102,
+          "sample_max_positive_ratio": 0.5045918226242065,
+          "mean_foreground_ratio": 0.15068751043279965,
+          "sample_count": 60000,
+          "sample_count_ge_0p8": 0,
+          "iteration_count_with_ge_0p8_sample": 0,
+          "empty_boundary_sample_count": 0,
+          "vanished_foreground_sample_count": 0
+        },
+        {
+          "stage": 5,
+          "shape": [
+            2,
+            1,
+            7,
+            7,
+            5
+          ],
+          "mean_positive_ratio": 0.5586721523682276,
+          "batch_min_positive_ratio": 0.27551019191741943,
+          "batch_max_positive_ratio": 0.781632661819458,
+          "sample_min_positive_ratio": 0.19591835141181946,
+          "sample_max_positive_ratio": 0.873469352722168,
+          "mean_foreground_ratio": 0.14706325856385133,
+          "sample_count": 60000,
+          "sample_count_ge_0p8": 1355,
+          "iteration_count_with_ge_0p8_sample": 1355,
+          "empty_boundary_sample_count": 0,
+          "vanished_foreground_sample_count": 0
+        }
+      ],
+      "snapshot_hashes_match_config": true
+    },
+    "Boundary_B": {
+      "row_count": 30000,
+      "first_logged_iteration": 0,
+      "last_logged_iteration": 29999,
+      "status": {
+        "state": "completed",
+        "iteration": 30000,
+        "boundary_mode": "local",
+        "best_validation_dice": 0.8736102770218507
+      },
+      "best_metrics": {
+        "iteration": 27600,
+        "dice": 0.8736102770218507,
+        "hd95": 9.76539488326629,
+        "asd": 2.509254586790909,
+        "iou": 0.7788048148887075,
+        "boundary_f1_1voxel": 0.520975290176488
+      },
+      "test_metrics": {
+        "dice": 0.8736102770218507,
+        "hd95": 9.76539488326629,
+        "asd": 2.509254586790909,
+        "iou": 0.7788048148887075,
+        "boundary_f1_1voxel": 0.520975290176488
+      },
+      "boundary_statistics": [
+        {
+          "stage": 1,
+          "shape": [
+            2,
+            1,
+            112,
+            112,
+            80
+          ],
+          "mean_positive_ratio": 0.05011574279802541,
+          "batch_min_positive_ratio": 0.028759267181158066,
+          "batch_max_positive_ratio": 0.06729163229465485,
+          "sample_min_positive_ratio": 0.024060307070612907,
+          "sample_max_positive_ratio": 0.06879284977912903,
+          "mean_foreground_ratio": 0.15126876525953412,
+          "sample_count": 60000,
+          "sample_count_ge_0p8": 0,
+          "iteration_count_with_ge_0p8_sample": 0,
+          "empty_boundary_sample_count": 0,
+          "vanished_foreground_sample_count": 0
+        },
+        {
+          "stage": 2,
+          "shape": [
+            2,
+            1,
+            56,
+            56,
+            40
+          ],
+          "mean_positive_ratio": 0.09907703689100841,
+          "batch_min_positive_ratio": 0.05648915469646454,
+          "batch_max_positive_ratio": 0.13317522406578064,
+          "sample_min_positive_ratio": 0.04799904301762581,
+          "sample_max_positive_ratio": 0.13669483363628387,
+          "mean_foreground_ratio": 0.15122219272802273,
+          "sample_count": 60000,
+          "sample_count_ge_0p8": 0,
+          "iteration_count_with_ge_0p8_sample": 0,
+          "empty_boundary_sample_count": 0,
+          "vanished_foreground_sample_count": 0
+        },
+        {
+          "stage": 3,
+          "shape": [
+            2,
+            1,
+            28,
+            28,
+            20
+          ],
+          "mean_positive_ratio": 0.19046686132724086,
+          "batch_min_positive_ratio": 0.1090880036354065,
+          "batch_max_positive_ratio": 0.2538265287876129,
+          "sample_min_positive_ratio": 0.09017856419086456,
+          "sample_max_positive_ratio": 0.265433669090271,
+          "mean_foreground_ratio": 0.1510896012785534,
+          "sample_count": 60000,
+          "sample_count_ge_0p8": 0,
+          "iteration_count_with_ge_0p8_sample": 0,
+          "empty_boundary_sample_count": 0,
+          "vanished_foreground_sample_count": 0
+        },
+        {
+          "stage": 4,
+          "shape": [
+            2,
+            1,
+            14,
+            14,
+            10
+          ],
+          "mean_positive_ratio": 0.34919961924205223,
+          "batch_min_positive_ratio": 0.19668366014957428,
+          "batch_max_positive_ratio": 0.46785712242126465,
+          "sample_min_positive_ratio": 0.15459182858467102,
+          "sample_max_positive_ratio": 0.5045918226242065,
+          "mean_foreground_ratio": 0.15068751043279965,
+          "sample_count": 60000,
+          "sample_count_ge_0p8": 0,
+          "iteration_count_with_ge_0p8_sample": 0,
+          "empty_boundary_sample_count": 0,
+          "vanished_foreground_sample_count": 0
+        },
+        {
+          "stage": 5,
+          "shape": [
+            2,
+            1,
+            7,
+            7,
+            5
+          ],
+          "mean_positive_ratio": 0.5586721523682276,
+          "batch_min_positive_ratio": 0.27551019191741943,
+          "batch_max_positive_ratio": 0.781632661819458,
+          "sample_min_positive_ratio": 0.19591835141181946,
+          "sample_max_positive_ratio": 0.873469352722168,
+          "mean_foreground_ratio": 0.14706325856385133,
+          "sample_count": 60000,
+          "sample_count_ge_0p8": 1355,
+          "iteration_count_with_ge_0p8_sample": 1355,
+          "empty_boundary_sample_count": 0,
+          "vanished_foreground_sample_count": 0
+        }
+      ],
+      "snapshot_hashes_match_config": true
+    }
+  },
+  "protected_artifact_sha256": {
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/log.txt": "91aa99520bf262a088398fd85e20a59ca01121002030d97ad72cc8a705ab69cc",
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/experiment_config.json": "f40adf6cf4b9dd72c7ce5a168d946ebb84d20ed00546ef5839b5442e3a0d53b2",
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/data_split_manifest.json": "5703eb72a10e3bc75befb52de1f7d664aedd4c7ffbb7a1f0f15239bc64422c74",
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/training_metrics.csv": "90391217cade456dfd0dfde24b7085f3890b19f3b9269f1e861f16806d413711",
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/validation_metrics.csv": "4001cbdf8bacd904a5b333625b93e6ea128f48867fc36b3cd8a925fc41040b4b",
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/best_metrics.json": "ccadfbd1704141991d812fe298612b3d6b3bd6703f5876d59460fa52034a0eb3",
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/test_metrics.json": "8aefea1486389e47893b78b94efb7d51271d8537e5ce30cc1adecdc000b82e8a",
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/run_status.json": "36323755ef0985f086171bcbfc1e0f77d73cbf68d60a74c12cd3d5971e7afd52",
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/Model_iter_27600.pth": "47d097fb749b565d91ce9842af6df8172dd15b7d97105448a59d6e1febadaad9",
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/log.txt": "0628759b3ec7f4bd2d3164f9a82ab25dc69d94995ae1923ae14088b37a3608c6",
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/experiment_config.json": "174393a9d7dbfe28204775be17bf827e11280707667617d4ac901ff52243b2a7",
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/data_split_manifest.json": "5703eb72a10e3bc75befb52de1f7d664aedd4c7ffbb7a1f0f15239bc64422c74",
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/training_metrics.csv": "88ca41d702382def5b7fae033f07da897b9828b0665226030b50e8fc2ea71523",
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/validation_metrics.csv": "d767e9cd7aca33f074cd4ca8160d7f2f8151c3f8779dd5f4241d2667f41bc12c",
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/best_metrics.json": "93115bde915f3b42f4f9888f24db8ce6802d7e9ad56bdca43d66b1ffc8286472",
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/test_metrics.json": "021d27fe7621e11a115e9feea24e18ebe2e1b93ff4479e1835e79416431bb25e",
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/run_status.json": "24624d9ddecd8c0710a488e20e108b7614e69d696e062e1e300377beefc3cae3",
+    "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/Model_iter_27600.pth": "a81e66770cccf7c4ed8339db38ceb2ebe2e733ff9af6d60f7a30e25c2f9746fc"
+  },
+  "comparison": {
+    "configuration_differences": [
+      "boundary_mode"
+    ],
+    "source_hashes_identical": true,
+    "all_target_fields_identical_every_iteration": true,
+    "same_initialization_note": "Confirmed by rerun test_same_initialization_rng_and_forward_in_both_modes; training config cannot alone establish same initialization."
+  },
+  "split_audit": {
+    "train_case_count": 80,
+    "labeled_case_count": 8,
+    "unlabeled_case_count": 72,
+    "validation_source": {
+      "path": "/aita_data/home/aita_duanxuelong/Dataset/LA/test.list",
+      "sha256": "e55b18069e27d6eab3dc21b8d1dc05a99ef83110fedc789f81c461d7bb152199",
+      "ids": [
+        "UPT6DX9IQY9JAZ7HJKA7",
+        "UTBUJIWZMKP64E3N73YC",
+        "ULHWPWKKLTE921LQLH1P",
+        "V0MZOWJ6MU3RMRCV9EXR",
+        "VDOF02M8ZHEAADFMS6NP",
+        "VG4C826RAAKVMV9BQLVD",
+        "VIXBEFTNVHZWKAKURJBN",
+        "VQ2L3WM8KEVF6L44E6G9",
+        "WBG9WYZ1B25WDT5WAT8T",
+        "WMDG2EFA6L2SNDZXIRU0",
+        "WNPKE0W404QE9AELX1LR",
+        "WSJB9P4JCXUVHBOYFVWL",
+        "WW8F5CO4S4K5IM5Z7EXX",
+        "X18LU5AOBNNDMLTA0JZL",
+        "XYDLYJ5CS19FDBVLJIPI",
+        "Y7ZU0B2APPF54WG6PDMF",
+        "YDKD1HVHSME6NVMA8I39",
+        "Z9GMG63CJLL0VW893BB1",
+        "ZIJLJAVQV3FJ6JSQOH1E",
+        "ZQPMJ4XEC5A4BISD45P1"
+      ]
+    },
+    "final_test_source": {
+      "path": "/aita_data/home/aita_duanxuelong/Dataset/LA/test.list",
+      "sha256": "e55b18069e27d6eab3dc21b8d1dc05a99ef83110fedc789f81c461d7bb152199",
+      "ids": [
+        "UPT6DX9IQY9JAZ7HJKA7",
+        "UTBUJIWZMKP64E3N73YC",
+        "ULHWPWKKLTE921LQLH1P",
+        "V0MZOWJ6MU3RMRCV9EXR",
+        "VDOF02M8ZHEAADFMS6NP",
+        "VG4C826RAAKVMV9BQLVD",
+        "VIXBEFTNVHZWKAKURJBN",
+        "VQ2L3WM8KEVF6L44E6G9",
+        "WBG9WYZ1B25WDT5WAT8T",
+        "WMDG2EFA6L2SNDZXIRU0",
+        "WNPKE0W404QE9AELX1LR",
+        "WSJB9P4JCXUVHBOYFVWL",
+        "WW8F5CO4S4K5IM5Z7EXX",
+        "X18LU5AOBNNDMLTA0JZL",
+        "XYDLYJ5CS19FDBVLJIPI",
+        "Y7ZU0B2APPF54WG6PDMF",
+        "YDKD1HVHSME6NVMA8I39",
+        "Z9GMG63CJLL0VW893BB1",
+        "ZIJLJAVQV3FJ6JSQOH1E",
+        "ZQPMJ4XEC5A4BISD45P1"
+      ]
+    },
+    "validation_test_independent": false,
+    "train_test_intersection": [],
+    "val_list_exists": false
+  },
+  "core_equality": {
+    "model/vnet.py": true,
+    "utils/losses.py": true,
+    "utils/transforms.py": true,
+    "dataloader/dataset.py": true,
+    "dataloader/TwoStreamBatchSampler.py": true,
+    "baseline_trainer_equals_legacy_reference": true
+  },
+  "matched_baseline": {
+    "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/seed_42/result_LA_10l/fold_0",
+    "best_logged_validation": [
+      27000,
+      0.873561,
+      8.888493
+    ],
+    "validation_count": 150,
+    "scheduler": "PolyWarmRestartScheduler(power=0.9,warm_restart_iters=8000)",
+    "baseline_manifest": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/boundary_ab_LA10_seed42/baseline_manifest.json"
+  },
+  "alternative_fixed_lr_baseline": {
+    "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline/Results/fixed_lr_0p01_seed42",
+    "scheduler": "LambdaLR(factor=1.0)",
+    "LA10_status": {
+      "state": "completed",
+      "dataset": "LA",
+      "labeled_percent": 10,
+      "gpu": 2,
+      "labeled_count": 8,
+      "current_iteration": 30000,
+      "train_log": "/home/duanxuelong/Baseline/BCSI_Baseline/Results/fixed_lr_0p01_seed42/seed_42_10pct/result_LA_10l/fold_0/log.txt",
+      "console_log": "/home/duanxuelong/Baseline/BCSI_Baseline/Results/fixed_lr_0p01_seed42/seed_42_10pct/LA_console.log",
+      "pid": 3679192,
+      "started_at": "2026-10-09T15:16:45+08:00",
+      "learning_rate": 0.01,
+      "best_dice": 0.877831,
+      "restarted_at": "2026-10-09T16:45:30+08:00",
+      "resume_iteration": 1400,
+      "resume_checkpoint": "/home/duanxuelong/Baseline/BCSI_Baseline/Results/fixed_lr_0p01_seed42/seed_42_10pct/result_LA_10l/fold_0/Model_iter_1400.pth",
+      "previous_iteration": 4200,
+      "recovery_type": "model_weights_only",
+      "optimizer_state_restored": false,
+      "original_teacher_state_restored": false,
+      "last_loss": 0.009772,
+      "last_validation_iteration": 30000,
+      "last_dice": 0.864668,
+      "last_hd95": 11.065707,
+      "training_finished_at": "2026-10-09T22:00:13+08:00",
+      "best_checkpoint": "/home/duanxuelong/Baseline/BCSI_Baseline/Results/fixed_lr_0p01_seed42/seed_42_10pct/result_LA_10l/fold_0/Model_iter_28400.pth",
+      "exit_code": 0,
+      "finished_at": "2026-10-09T22:01:03+08:00",
+      "test_metrics": {
+        "dice": 0.8778317908449644,
+        "iou": 0.784228846636903,
+        "hd95": 8.857430274104976,
+        "asd": 2.163376416187848,
+        "case_count": 20
+      }
+    },
+    "comparison_warning": "Different scheduler and model-only recovery; do not attribute differences from this alternative baseline exclusively to boundary supervision."
+  },
+  "legacy_test_rerun": {
+    "command": "/aita_data/home/aita_duanxuelong/.conda/envs/SSL29/bin/python -B experiments/boundary_supervision/test_boundary_supervision.py --threads 4",
+    "date": "2026-10-20",
+    "tests_run": 10,
+    "failures": 0,
+    "errors": 0,
+    "seconds": 8.378,
+    "scope": "CPU synthetic gradient routing, numeric derivative, same initialization, none-mode three-step regression, model checkpoint interface, shapes, morphology, extreme logits; validation metrics mocked in persistence test."
+  },
+  "confirmed_code_errors_in_boundary_routing": [],
+  "confirmed_design_differences": [
+    "Five Conv3d(C,1,1) heads, not the requested BFA four nonlinear heads.",
+    "GT nearest downsample precedes per-scale 3x3x3 dilation-minus-erosion, not full-resolution shared Laplacian target with upsampled predictions.",
+    "Each scale contributes weight 0.1/5 despite increasingly thick coarse targets; E5 mean coverage 55.8672%.",
+    "LA selection validation and final test use the same 20 test.list cases.",
+    "Teacher follows inherited parameters-only EMA; its BN buffers update from its ordinary train-mode forward and dropout remains active during training."
+  ],
+  "unverified_hypotheses": [
+    "Coarse expanded boundaries could weaken localization or encourage nonlocal semantic responses.",
+    "Shared encoder MT and boundary gradients may conflict; no legacy per-stage gradient cosine records exist.",
+    "Changing head capacity and target construction could improve segmentation; only controlled new runs can establish this.",
+    "The B-local single-seed advantage may not persist across seeds or datasets."
+  ]
+}

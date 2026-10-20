@@ -1,0 +1,13 @@
+test_default_and_optional_forward_match_reference_with_same_rng (__main__.DecoderSupervisionTests) ... ok
+test_final_segmentation_loss_is_counted_once (__main__.DecoderSupervisionTests) ... ok
+test_la_native_side_shapes (__main__.DecoderSupervisionTests) ... ok
+test_labeled_only_head_gradients_and_finite_extreme_logits (__main__.DecoderSupervisionTests) ... ok
+test_old_state_dict_strict_inference_and_separate_heads (__main__.DecoderSupervisionTests) ... ok
+test_shapes_and_nearest_labels_match_all_four_outputs (__main__.DecoderSupervisionTests) ... ok
+test_side_features_match_exact_ducisc_pre_block_positions (__main__.DecoderSupervisionTests) ... ok
+test_trainer_single_student_ema_update_and_original_initialization (__main__.DecoderSupervisionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 3.614s
+
+OK

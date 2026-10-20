@@ -1,0 +1,7 @@
+{
+  "state": "completed",
+  "iteration": 2,
+  "boundary_mode": "none",
+  "auxiliary_mode": "decoder_deep_seg",
+  "best_validation_dice": 0.18170564386829563
+}

@@ -1,0 +1,11 @@
+Namespace(data_path='/aita_data/home/aita_duanxuelong/Dataset/LA', dataset='LA', labeled_num=10, nms=True, in_channels=1, num_classes=2, patch_size=[112, 112, 80], batch_size=4, labeled_bs=2, seed=42, base_lr=0.01, max_iterations=2, n_fold=1, output_dir='Results/refactor_smoke_20261020', test_interval=2, resume_model_path=None, start_iteration=0, consistency_rampup=200.0, consistency=0.1, ema_decay=0.9, device='cuda:0', boundary_mode='none', boundary_weight=0.1, boundary_padding_mode='zero', auxiliary_mode='decoder_deep_seg', decoder_aux_weight=0.1, final_supervision_weight=1.0, gradient_diagnostic_interval=0, gradient_cosine_threshold=-0.2, gradient_ratio_threshold=0.1, guidance_mode='none')
+train total 80 samples
+4 iterations per epoch
+  0%|                                           | 0/1 [00:00<?, ?it/s]/aita_data/home/aita_duanxuelong/.conda/envs/SSL29/lib/python3.10/logging/__init__.py:368: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  msg = msg % self.args
+iteration 0 : loss : 0.988627 supervised : 0.931695 consistency : 0.062821 lr : 0.009999
+iteration 1 : loss : 1.050418 supervised : 0.993603 consistency : 0.036227 lr : 0.009998
+iteration 2 : asd : 27.815812 boundary_f1_1voxel : 0.042814
+iteration 2 : mean_dice : 0.181706 mean_hd95 : 56.232403
+  0%|                                           | 0/1 [01:01<?, ?it/s]
