@@ -1,0 +1,107 @@
+{
+  "purpose": "Zero optimizer updates; repeated backward of the SAME required trilinear interpolation graph",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "torch_version": "2.9.1+cu126",
+  "optimizer_updates": 0,
+  "cuda_same_graph_repeats": [
+    {
+      "bitwise_equal": false,
+      "within_tolerance": false,
+      "max_abs_error": 8.96453857421875e-05,
+      "compared_leaves": 1,
+      "unequal_leaves": [
+        {
+          "path": "state.gradient",
+          "bitwise_equal": false,
+          "within_tolerance": false,
+          "max_abs_error": 8.96453857421875e-05,
+          "finite": true
+        }
+      ],
+      "outside_tolerance": [
+        {
+          "path": "state.gradient",
+          "bitwise_equal": false,
+          "within_tolerance": false,
+          "max_abs_error": 8.96453857421875e-05,
+          "finite": true
+        }
+      ],
+      "groups": {
+        "gradient": {
+          "bitwise_equal": false,
+          "within_tolerance": false,
+          "max_abs_error": 8.96453857421875e-05
+        }
+      }
+    },
+    {
+      "bitwise_equal": false,
+      "within_tolerance": false,
+      "max_abs_error": 0.000110626220703125,
+      "compared_leaves": 1,
+      "unequal_leaves": [
+        {
+          "path": "state.gradient",
+          "bitwise_equal": false,
+          "within_tolerance": false,
+          "max_abs_error": 0.000110626220703125,
+          "finite": true
+        }
+      ],
+      "outside_tolerance": [
+        {
+          "path": "state.gradient",
+          "bitwise_equal": false,
+          "within_tolerance": false,
+          "max_abs_error": 0.000110626220703125,
+          "finite": true
+        }
+      ],
+      "groups": {
+        "gradient": {
+          "bitwise_equal": false,
+          "within_tolerance": false,
+          "max_abs_error": 0.000110626220703125
+        }
+      }
+    },
+    {
+      "bitwise_equal": false,
+      "within_tolerance": false,
+      "max_abs_error": 0.000118255615234375,
+      "compared_leaves": 1,
+      "unequal_leaves": [
+        {
+          "path": "state.gradient",
+          "bitwise_equal": false,
+          "within_tolerance": false,
+          "max_abs_error": 0.000118255615234375,
+          "finite": true
+        }
+      ],
+      "outside_tolerance": [
+        {
+          "path": "state.gradient",
+          "bitwise_equal": false,
+          "within_tolerance": false,
+          "max_abs_error": 0.000118255615234375,
+          "finite": true
+        }
+      ],
+      "groups": {
+        "gradient": {
+          "bitwise_equal": false,
+          "within_tolerance": false,
+          "max_abs_error": 0.000118255615234375
+        }
+      }
+    }
+  ],
+  "cuda_bitwise_equal": false,
+  "cpu_same_graph_bitwise_equal": true,
+  "strict_deterministic_backward_supported": false,
+  "strict_deterministic_error": "upsample_trilinear3d_backward_out_cuda does not have a deterministic implementation, but you set 'torch.use_deterministic_algorithms(True)'. You can turn off determinism just for this operation, or you can use the 'warn_only=True' option, if that's acceptable for your application. You can also file an issue at https://github.com/pytorch/pytorch/issues to help us prioritize adding deterministic support for this operation.",
+  "source_note": "Installed torch/__init__.py lines1391-1397 and nn/functional.py line4605 document nondeterministic CUDA trilinear backward.",
+  "conclusion": "This probe can confirm an operator-level reproducibility limitation; it does not prove that every whole-model on/off difference is caused by this operator."
+}

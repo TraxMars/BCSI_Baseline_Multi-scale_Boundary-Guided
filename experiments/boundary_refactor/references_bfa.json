@@ -1,0 +1,32 @@
+{
+  "audit_date": "2026-10-20",
+  "repository": "https://github.com/hyg902/BFA-main",
+  "commit": "74c2f2da2c2a399148dfcbb4750ea016b1941cbe",
+  "retrieval": "GitHub connector fetch_file; exact local contents verified against Git blob SHA",
+  "files": [
+    {
+      "path": "code/networks/VNet_BFA.py",
+      "git_blob_sha": "64f5c938ee32bed7866148dd6ac2c243238269e8",
+      "sha256": "2bff1081b24cac2916c43867bddb45f758c911900a5bd8e302d9236573d89d28",
+      "url": "https://github.com/hyg902/BFA-main/blob/74c2f2da2c2a399148dfcbb4750ea016b1941cbe/code/networks/VNet_BFA.py",
+      "line_references": {"head": [9, 51], "head_channels": [310, 313], "forward_and_upsampling": [351, 365]}
+    },
+    {
+      "path": "code/BFA_loss/bfa_3D.py",
+      "git_blob_sha": "3da6fa5d472baa7d734ff528c3ae8a1bb4514373",
+      "sha256": "9b49509098d52f42bd73c67b306030970d5c57f7a1e6d6e30f205c1e5adb55a3",
+      "url": "https://github.com/hyg902/BFA-main/blob/74c2f2da2c2a399148dfcbb4750ea016b1941cbe/code/BFA_loss/bfa_3D.py",
+      "line_references": {"soft_dice": [8, 16], "laplacian_kernel_and_loss": [29, 51], "unlabeled_log": [59, 90]}
+    },
+    {
+      "path": "code/LA_BFA_train.py",
+      "git_blob_sha": "abd634d425d4a0f3ca32aae480d74474ea9411cf",
+      "sha256": "0cfe67427e6057cb5a711018f194dbefb6605dd205c766a56e118f26b1d6c2a0",
+      "url": "https://github.com/hyg902/BFA-main/blob/74c2f2da2c2a399148dfcbb4750ea016b1941cbe/code/LA_BFA_train.py",
+      "line_references": {"labeled_pretrain": [161, 199], "self_train_batch_and_split": [269, 291], "losses": [293, 338], "optimizer_ema_and_validation": [346, 376]}
+    }
+  ],
+  "reference_laplacian": {"center": 26, "neighbors": -1, "kernel_size": 3, "padding": "zero", "clamp_min": 0, "threshold_gt": 0.1, "support": "foreground_inner_boundary"},
+  "planned_ab_common_choices": {"stages": [1, 2, 3, 4], "head_batch": "labeled_only", "upsampling": "trilinear", "align_corners": true, "shared_full_resolution_target": true, "unlabeled_log": false, "padding_default": "zero", "padding_optional": "replicate", "initial_boundary_weight": 0.1},
+  "upstream_and_adaptation_are_distinct": true
+}

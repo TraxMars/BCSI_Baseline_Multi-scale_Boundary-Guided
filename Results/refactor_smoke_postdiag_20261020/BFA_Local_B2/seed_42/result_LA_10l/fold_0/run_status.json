@@ -1,0 +1,7 @@
+{
+  "state": "completed",
+  "iteration": 2,
+  "boundary_mode": "bfa_local",
+  "auxiliary_mode": "none",
+  "best_validation_dice": 0.181700972765946
+}

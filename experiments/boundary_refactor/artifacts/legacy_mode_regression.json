@@ -1,0 +1,278 @@
+{
+  "gradient_matrices": {
+    "deep": [
+      [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      [
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      [
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    ],
+    "local": [
+      [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        true,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        false,
+        true
+      ]
+    ]
+  },
+  "shape_audits": {
+    "96x96x96": [
+      {
+        "shape": [
+          1,
+          1,
+          96,
+          96,
+          96
+        ],
+        "positive_ratio": 0.03126808628439903,
+        "per_sample_positive_ratio": [
+          0.03126808628439903
+        ],
+        "foreground_ratio": 0.125,
+        "vanished_foreground_samples": 0,
+        "empty_boundary_samples": 0,
+        "high_coverage_samples": 0
+      },
+      {
+        "shape": [
+          1,
+          1,
+          48,
+          48,
+          48
+        ],
+        "positive_ratio": 0.06264467537403107,
+        "per_sample_positive_ratio": [
+          0.06264467537403107
+        ],
+        "foreground_ratio": 0.125,
+        "vanished_foreground_samples": 0,
+        "empty_boundary_samples": 0,
+        "high_coverage_samples": 0
+      },
+      {
+        "shape": [
+          1,
+          1,
+          24,
+          24,
+          24
+        ],
+        "positive_ratio": 0.12615740299224854,
+        "per_sample_positive_ratio": [
+          0.12615740299224854
+        ],
+        "foreground_ratio": 0.125,
+        "vanished_foreground_samples": 0,
+        "empty_boundary_samples": 0,
+        "high_coverage_samples": 0
+      },
+      {
+        "shape": [
+          1,
+          1,
+          12,
+          12,
+          12
+        ],
+        "positive_ratio": 0.25925925374031067,
+        "per_sample_positive_ratio": [
+          0.25925925374031067
+        ],
+        "foreground_ratio": 0.125,
+        "vanished_foreground_samples": 0,
+        "empty_boundary_samples": 0,
+        "high_coverage_samples": 0
+      },
+      {
+        "shape": [
+          1,
+          1,
+          6,
+          6,
+          6
+        ],
+        "positive_ratio": 0.5740740895271301,
+        "per_sample_positive_ratio": [
+          0.5740740895271301
+        ],
+        "foreground_ratio": 0.125,
+        "vanished_foreground_samples": 0,
+        "empty_boundary_samples": 0,
+        "high_coverage_samples": 0
+      }
+    ],
+    "112x112x80": [
+      {
+        "shape": [
+          1,
+          1,
+          112,
+          112,
+          80
+        ],
+        "positive_ratio": 0.030373087152838707,
+        "per_sample_positive_ratio": [
+          0.030373087152838707
+        ],
+        "foreground_ratio": 0.125,
+        "vanished_foreground_samples": 0,
+        "empty_boundary_samples": 0,
+        "high_coverage_samples": 0
+      },
+      {
+        "shape": [
+          1,
+          1,
+          56,
+          56,
+          40
+        ],
+        "positive_ratio": 0.06084183603525162,
+        "per_sample_positive_ratio": [
+          0.06084183603525162
+        ],
+        "foreground_ratio": 0.125,
+        "vanished_foreground_samples": 0,
+        "empty_boundary_samples": 0,
+        "high_coverage_samples": 0
+      },
+      {
+        "shape": [
+          1,
+          1,
+          28,
+          28,
+          20
+        ],
+        "positive_ratio": 0.12244898080825806,
+        "per_sample_positive_ratio": [
+          0.12244898080825806
+        ],
+        "foreground_ratio": 0.125,
+        "vanished_foreground_samples": 0,
+        "empty_boundary_samples": 0,
+        "high_coverage_samples": 0
+      },
+      {
+        "shape": [
+          1,
+          1,
+          14,
+          14,
+          10
+        ],
+        "positive_ratio": 0.2510204017162323,
+        "per_sample_positive_ratio": [
+          0.2510204017162323
+        ],
+        "foreground_ratio": 0.125,
+        "vanished_foreground_samples": 0,
+        "empty_boundary_samples": 0,
+        "high_coverage_samples": 0
+      },
+      {
+        "shape": [
+          1,
+          1,
+          7,
+          7,
+          5
+        ],
+        "positive_ratio": 0.5877550840377808,
+        "per_sample_positive_ratio": [
+          0.5877550840377808
+        ],
+        "foreground_ratio": 0.13061223924160004,
+        "vanished_foreground_samples": 0,
+        "empty_boundary_samples": 0,
+        "high_coverage_samples": 0
+      }
+    ]
+  },
+  "tests_run": 10,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "torch_version": "2.9.1+cu126",
+  "cuda_available": false,
+  "note": "Validation persistence uses mocked metrics, not an evaluated accuracy result.",
+  "execution_context": {
+    "date": "2026-10-20",
+    "repository": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided_BFA_Refactor",
+    "branch": "experiment/bfa-a2-b2-decoder-ds",
+    "description": "Unchanged legacy 10-test suite executed against the NEW branch implementation; separate from the pre-implementation audit run in the original repository.",
+    "seconds": 6.626,
+    "command": "/aita_data/home/aita_duanxuelong/.conda/envs/SSL29/bin/python -B experiments/boundary_supervision/test_boundary_supervision.py --threads 4 --report experiments/boundary_refactor/artifacts/legacy_mode_regression.json",
+    "test_source_sha256": "e21c84943a480d37b4aef969cd97747e8b2389d76255416c6298ebec6a7c17bc",
+    "legacy_test_source_unchanged": true,
+    "pre_implementation_original_repository_run": {
+      "seconds": 8.378,
+      "tests_run": 10,
+      "failures": 0,
+      "errors": 0,
+      "details": "../legacy_audit.json:legacy_test_rerun"
+    }
+  }
+}

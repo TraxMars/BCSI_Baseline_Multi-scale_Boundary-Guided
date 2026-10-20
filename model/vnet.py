@@ -194,7 +194,8 @@ class Decoder(nn.Module):
 
         self.dropout = nn.Dropout3d(p=0.5, inplace=False)
 
-    def forward(self, features):
+    def forward(self, features, return_features=False):
+        """Optionally expose DuCiSC side-head inputs without changing decoding."""
         x1 = features[0]
         x2 = features[1]
         x3 = features[2]
@@ -221,6 +222,9 @@ class Decoder(nn.Module):
             x9 = self.dropout(x9)
             
         out_seg = self.out_conv(x9)
+        if return_features:
+            # Exact DuCiSC positions: skip additions before the next block.
+            return out_seg, [x5_up, x6_up, x7_up]
         return out_seg
 
     

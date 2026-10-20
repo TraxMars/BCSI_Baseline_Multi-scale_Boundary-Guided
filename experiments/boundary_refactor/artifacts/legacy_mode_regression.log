@@ -1,0 +1,19 @@
+test_all_five_isolated_gradient_scopes (__main__.BoundaryTests) ... ok
+test_guidance_rejected_and_surface_metric (__main__.BoundaryTests) ... ok
+test_local_sum_matches_independent_derivatives (__main__.BoundaryTests) ... ok
+test_loss_3d_formula_and_extreme_logits (__main__.BoundaryTests) ... ok
+test_none_matches_pre_change_mt_for_three_steps (__main__.BoundaryTests) ... ok
+test_original_metric_return_and_extended_metrics (__main__.BoundaryTests) ... ok
+test_real_default_shapes_96_and_la (__main__.BoundaryTests) ... ok
+test_same_initialization_rng_and_forward_in_both_modes (__main__.BoundaryTests) ... ok
+test_student_teacher_single_updates_both_modes (__main__.BoundaryTests) ... WARNING:root:boundary scale 4: high_coverage_samples=2, shape=[2, 1, 4, 4, 4], ratio=[1.0, 1.0]
+WARNING:root:boundary scale 5: high_coverage_samples=2, shape=[2, 1, 2, 2, 2], ratio=[1.0, 1.0]
+WARNING:root:boundary scale 4: high_coverage_samples=2, shape=[2, 1, 4, 4, 4], ratio=[1.0, 1.0]
+WARNING:root:boundary scale 5: high_coverage_samples=2, shape=[2, 1, 2, 2, 2], ratio=[1.0, 1.0]
+ok
+test_target_matches_independent_morphology (__main__.BoundaryTests) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 6.626s
+
+OK
