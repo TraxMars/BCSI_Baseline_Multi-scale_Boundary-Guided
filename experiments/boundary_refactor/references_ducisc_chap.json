@@ -1,0 +1,89 @@
+{
+  "audit_date_client": "2026-10-20",
+  "references": [
+    {
+      "name": "DuCiSC",
+      "repository": "https://github.com/ShanghaiTech-IMPACT/DuCiSC",
+      "commit": "cc77a8308d0aa1c59a7c29556478bfd33d804a1a",
+      "retrieval": "git clone --depth 1; real source read locally",
+      "files": [
+        {
+          "path": "code/networks/VNet.py",
+          "sha256": "3875141b68fd9823798f54bbb50bf99031ec075f852d73feb0f15bba57feb93a",
+          "source_links": [
+            "https://github.com/ShanghaiTech-IMPACT/DuCiSC/blob/cc77a8308d0aa1c59a7c29556478bfd33d804a1a/code/networks/VNet.py#L283-L320",
+            "https://github.com/ShanghaiTech-IMPACT/DuCiSC/blob/cc77a8308d0aa1c59a7c29556478bfd33d804a1a/code/networks/VNet.py#L344-L391"
+          ]
+        },
+        {
+          "path": "code/train_DuCiSC.py",
+          "sha256": "eb4aae2b123bedb9edd60d30d12f647c6c5baa9910911b7168f846d1881c4838",
+          "source_links": [
+            "https://github.com/ShanghaiTech-IMPACT/DuCiSC/blob/cc77a8308d0aa1c59a7c29556478bfd33d804a1a/code/train_DuCiSC.py#L117-L158",
+            "https://github.com/ShanghaiTech-IMPACT/DuCiSC/blob/cc77a8308d0aa1c59a7c29556478bfd33d804a1a/code/train_DuCiSC.py#L275-L280",
+            "https://github.com/ShanghaiTech-IMPACT/DuCiSC/blob/cc77a8308d0aa1c59a7c29556478bfd33d804a1a/code/train_DuCiSC.py#L320-L331"
+          ]
+        },
+        {
+          "path": "code/utils/losses.py",
+          "sha256": "404792a5fec093617958f732967fcbdc95d60f444accfae318474f54c96f4725",
+          "source_links": [
+            "https://github.com/ShanghaiTech-IMPACT/DuCiSC/blob/cc77a8308d0aa1c59a7c29556478bfd33d804a1a/code/utils/losses.py#L4-L8"
+          ]
+        },
+        {
+          "path": "code/utils/test_patch.py",
+          "sha256": "45e7807e078be9f3aabc1aae637a5601eab72f5bd8b16c36d701640ccc400436",
+          "source_links": [
+            "https://github.com/ShanghaiTech-IMPACT/DuCiSC/blob/cc77a8308d0aa1c59a7c29556478bfd33d804a1a/code/utils/test_patch.py#L18-L29"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CHAP",
+      "repository": "https://github.com/gardnerzhou/CHAP",
+      "commit": "8754bfa5e5d269719b0ca45345c8a28742b13c0d",
+      "retrieval": "git clone --depth 1; real source read locally",
+      "files": [
+        {
+          "path": "utils/grad.py",
+          "sha256": "63d3a25a0d6b268ca95a817240175f27f18cf486b794faa02674fb9c8eb4de30",
+          "source_links": [
+            "https://github.com/gardnerzhou/CHAP/blob/8754bfa5e5d269719b0ca45345c8a28742b13c0d/utils/grad.py#L120-L174",
+            "https://github.com/gardnerzhou/CHAP/blob/8754bfa5e5d269719b0ca45345c8a28742b13c0d/utils/grad.py#L176-L219"
+          ]
+        },
+        {
+          "path": "utils/get_gradient.py",
+          "sha256": "f74c4dcc80c0336548fa6deeceea7b09abf98490f76e38c8d884991505634be8",
+          "source_links": [
+            "https://github.com/gardnerzhou/CHAP/blob/8754bfa5e5d269719b0ca45345c8a28742b13c0d/utils/get_gradient.py#L3-L18"
+          ]
+        },
+        {
+          "path": "networks/FilterDropout.py",
+          "sha256": "322985f3db120d05309abeb550167d801a3768b3c7d3f1fa2b243ba14725f3c6",
+          "source_links": [
+            "https://github.com/gardnerzhou/CHAP/blob/8754bfa5e5d269719b0ca45345c8a28742b13c0d/networks/FilterDropout.py#L95-L146",
+            "https://github.com/gardnerzhou/CHAP/blob/8754bfa5e5d269719b0ca45345c8a28742b13c0d/networks/FilterDropout.py#L175-L218"
+          ]
+        },
+        {
+          "path": "networks/vnet.py",
+          "sha256": "08dbe2b2a98a589da5c92ecd8e1db07a1e7d237aa09cff49e1b016c4058df494",
+          "source_links": [
+            "https://github.com/gardnerzhou/CHAP/blob/8754bfa5e5d269719b0ca45345c8a28742b13c0d/networks/vnet.py#L226-L248"
+          ]
+        },
+        {
+          "path": "train_ours_3D.py",
+          "sha256": "74945b37ff5ae27138a55feeccf9191a881ab134fc1e158b498590e9de4e9ad0",
+          "source_links": [
+            "https://github.com/gardnerzhou/CHAP/blob/8754bfa5e5d269719b0ca45345c8a28742b13c0d/train_ours_3D.py#L269-L303"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+[15:03:42.714] Namespace(data_path='/aita_data/home/aita_duanxuelong/Dataset/LA', dataset='LA', labeled_num=10, nms=True, in_channels=1, num_classes=2, patch_size=[112, 112, 80], batch_size=4, labeled_bs=2, seed=42, base_lr=0.01, max_iterations=2, n_fold=1, output_dir='Results/refactor_smoke_20261020', test_interval=2, resume_model_path=None, start_iteration=0, consistency_rampup=200.0, consistency=0.1, ema_decay=0.9, device='cuda:0', boundary_mode='bfa_local', boundary_weight=0.1, boundary_padding_mode='zero', auxiliary_mode='none', decoder_aux_weight=0.1, final_supervision_weight=1.0, gradient_diagnostic_interval=1, gradient_cosine_threshold=-0.2, gradient_ratio_threshold=0.1, guidance_mode='none')
+[15:03:43.312] 4 iterations per epoch
+[15:03:44.797] iteration 0 : loss : 1.007194 supervised : 0.931695 consistency : 0.062821 lr : 0.009999
+[15:03:44.800] boundary mode=bfa_local total=0.754574 positive_ratios=[0.02525360696017742, 0.02525360696017742, 0.02525360696017742, 0.02525360696017742]
+[15:03:45.278] iteration 1 : loss : 1.070009 supervised : 0.994299 consistency : 0.036114 lr : 0.009998
+[15:03:45.280] boundary mode=bfa_local total=0.756864 positive_ratios=[0.025053810328245163, 0.025053810328245163, 0.025053810328245163, 0.025053810328245163]
+[15:04:46.069] iteration 2 : asd : 27.821479 boundary_f1_1voxel : 0.042783
+[15:04:46.308] iteration 2 : mean_dice : 0.181701 mean_hd95 : 56.238004

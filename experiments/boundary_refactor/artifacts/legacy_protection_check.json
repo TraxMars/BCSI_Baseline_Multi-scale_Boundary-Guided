@@ -1,0 +1,116 @@
+{
+  "audit_date": "2026-10-20",
+  "scope": "18 pre-existing A/B logs, configs, manifests, train/validation tables, metrics, status, and best Teacher checkpoints",
+  "checked_after": "new implementation and successful synthetic A2/B2 tests",
+  "all_unchanged": true,
+  "checks": [
+    {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/log.txt",
+      "expected_sha256": "91aa99520bf262a088398fd85e20a59ca01121002030d97ad72cc8a705ab69cc",
+      "observed_sha256": "91aa99520bf262a088398fd85e20a59ca01121002030d97ad72cc8a705ab69cc",
+      "unchanged": true
+    },
+    {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/experiment_config.json",
+      "expected_sha256": "f40adf6cf4b9dd72c7ce5a168d946ebb84d20ed00546ef5839b5442e3a0d53b2",
+      "observed_sha256": "f40adf6cf4b9dd72c7ce5a168d946ebb84d20ed00546ef5839b5442e3a0d53b2",
+      "unchanged": true
+    },
+    {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/data_split_manifest.json",
+      "expected_sha256": "5703eb72a10e3bc75befb52de1f7d664aedd4c7ffbb7a1f0f15239bc64422c74",
+      "observed_sha256": "5703eb72a10e3bc75befb52de1f7d664aedd4c7ffbb7a1f0f15239bc64422c74",
+      "unchanged": true
+    },
+    {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/training_metrics.csv",
+      "expected_sha256": "90391217cade456dfd0dfde24b7085f3890b19f3b9269f1e861f16806d413711",
+      "observed_sha256": "90391217cade456dfd0dfde24b7085f3890b19f3b9269f1e861f16806d413711",
+      "unchanged": true
+    },
+    {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/validation_metrics.csv",
+      "expected_sha256": "4001cbdf8bacd904a5b333625b93e6ea128f48867fc36b3cd8a925fc41040b4b",
+      "observed_sha256": "4001cbdf8bacd904a5b333625b93e6ea128f48867fc36b3cd8a925fc41040b4b",
+      "unchanged": true
+    },
+    {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/best_metrics.json",
+      "expected_sha256": "ccadfbd1704141991d812fe298612b3d6b3bd6703f5876d59460fa52034a0eb3",
+      "observed_sha256": "ccadfbd1704141991d812fe298612b3d6b3bd6703f5876d59460fa52034a0eb3",
+      "unchanged": true
+    },
+    {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/test_metrics.json",
+      "expected_sha256": "8aefea1486389e47893b78b94efb7d51271d8537e5ce30cc1adecdc000b82e8a",
+      "observed_sha256": "8aefea1486389e47893b78b94efb7d51271d8537e5ce30cc1adecdc000b82e8a",
+      "unchanged": true
+    },
+    {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/run_status.json",
+      "expected_sha256": "36323755ef0985f086171bcbfc1e0f77d73cbf68d60a74c12cd3d5971e7afd52",
+      "observed_sha256": "36323755ef0985f086171bcbfc1e0f77d73cbf68d60a74c12cd3d5971e7afd52",
+      "unchanged": true
+    },
+    {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_A/seed_42/result_LA_10l/fold_0/Model_iter_27600.pth",
+      "expected_sha256": "47d097fb749b565d91ce9842af6df8172dd15b7d97105448a59d6e1febadaad9",
+      "observed_sha256": "47d097fb749b565d91ce9842af6df8172dd15b7d97105448a59d6e1febadaad9",
+      "unchanged": true
+    },
+    {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/log.txt",
+      "expected_sha256": "0628759b3ec7f4bd2d3164f9a82ab25dc69d94995ae1923ae14088b37a3608c6",
+      "observed_sha256": "0628759b3ec7f4bd2d3164f9a82ab25dc69d94995ae1923ae14088b37a3608c6",
+      "unchanged": true
+    },
+    {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/experiment_config.json",
+      "expected_sha256": "174393a9d7dbfe28204775be17bf827e11280707667617d4ac901ff52243b2a7",
+      "observed_sha256": "174393a9d7dbfe28204775be17bf827e11280707667617d4ac901ff52243b2a7",
+      "unchanged": true
+    },
+    {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/data_split_manifest.json",
+      "expected_sha256": "5703eb72a10e3bc75befb52de1f7d664aedd4c7ffbb7a1f0f15239bc64422c74",
+      "observed_sha256": "5703eb72a10e3bc75befb52de1f7d664aedd4c7ffbb7a1f0f15239bc64422c74",
+      "unchanged": true
+    },
+    {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/training_metrics.csv",
+      "expected_sha256": "88ca41d702382def5b7fae033f07da897b9828b0665226030b50e8fc2ea71523",
+      "observed_sha256": "88ca41d702382def5b7fae033f07da897b9828b0665226030b50e8fc2ea71523",
+      "unchanged": true
+    },
+    {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/validation_metrics.csv",
+      "expected_sha256": "d767e9cd7aca33f074cd4ca8160d7f2f8151c3f8779dd5f4241d2667f41bc12c",
+      "observed_sha256": "d767e9cd7aca33f074cd4ca8160d7f2f8151c3f8779dd5f4241d2667f41bc12c",
+      "unchanged": true
+    },
+    {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/best_metrics.json",
+      "expected_sha256": "93115bde915f3b42f4f9888f24db8ce6802d7e9ad56bdca43d66b1ffc8286472",
+      "observed_sha256": "93115bde915f3b42f4f9888f24db8ce6802d7e9ad56bdca43d66b1ffc8286472",
+      "unchanged": true
+    },
+    {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/test_metrics.json",
+      "expected_sha256": "021d27fe7621e11a115e9feea24e18ebe2e1b93ff4479e1835e79416431bb25e",
+      "observed_sha256": "021d27fe7621e11a115e9feea24e18ebe2e1b93ff4479e1835e79416431bb25e",
+      "unchanged": true
+    },
+    {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/run_status.json",
+      "expected_sha256": "24624d9ddecd8c0710a488e20e108b7614e69d696e062e1e300377beefc3cae3",
+      "observed_sha256": "24624d9ddecd8c0710a488e20e108b7614e69d696e062e1e300377beefc3cae3",
+      "unchanged": true
+    },
+    {
+      "path": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/Boundary_B/seed_42/result_LA_10l/fold_0/Model_iter_27600.pth",
+      "expected_sha256": "a81e66770cccf7c4ed8339db38ceb2ebe2e733ff9af6d60f7a30e25c2f9746fc",
+      "observed_sha256": "a81e66770cccf7c4ed8339db38ceb2ebe2e733ff9af6d60f7a30e25c2f9746fc",
+      "unchanged": true
+    }
+  ]
+}

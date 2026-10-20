@@ -1,0 +1,600 @@
+{
+  "gradient_matrices": {
+    "bfa_deep": [
+      [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      [
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      [
+        true,
+        true,
+        true,
+        true,
+        false
+      ]
+    ],
+    "bfa_local": [
+      [
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      [
+        false,
+        false,
+        false,
+        true,
+        false
+      ]
+    ]
+  },
+  "shape_audits": {
+    "32x32x32": [
+      {
+        "shape": [
+          1,
+          1,
+          32,
+          32,
+          32
+        ],
+        "native_shape": [
+          1,
+          1,
+          32,
+          32,
+          32
+        ],
+        "upsampled_shape": [
+          1,
+          1,
+          32,
+          32,
+          32
+        ],
+        "target_shape": [
+          1,
+          1,
+          32,
+          32,
+          32
+        ],
+        "positive_ratio": 0.041259765625,
+        "per_sample_positive_ratio": [
+          0.041259765625
+        ],
+        "foreground_ratio": 0.125,
+        "vanished_foreground_samples": 0,
+        "empty_boundary_samples": 0,
+        "high_coverage_samples": 0
+      },
+      {
+        "shape": [
+          1,
+          1,
+          16,
+          16,
+          16
+        ],
+        "native_shape": [
+          1,
+          1,
+          16,
+          16,
+          16
+        ],
+        "upsampled_shape": [
+          1,
+          1,
+          32,
+          32,
+          32
+        ],
+        "target_shape": [
+          1,
+          1,
+          32,
+          32,
+          32
+        ],
+        "positive_ratio": 0.041259765625,
+        "per_sample_positive_ratio": [
+          0.041259765625
+        ],
+        "foreground_ratio": 0.125,
+        "vanished_foreground_samples": 0,
+        "empty_boundary_samples": 0,
+        "high_coverage_samples": 0
+      },
+      {
+        "shape": [
+          1,
+          1,
+          8,
+          8,
+          8
+        ],
+        "native_shape": [
+          1,
+          1,
+          8,
+          8,
+          8
+        ],
+        "upsampled_shape": [
+          1,
+          1,
+          32,
+          32,
+          32
+        ],
+        "target_shape": [
+          1,
+          1,
+          32,
+          32,
+          32
+        ],
+        "positive_ratio": 0.041259765625,
+        "per_sample_positive_ratio": [
+          0.041259765625
+        ],
+        "foreground_ratio": 0.125,
+        "vanished_foreground_samples": 0,
+        "empty_boundary_samples": 0,
+        "high_coverage_samples": 0
+      },
+      {
+        "shape": [
+          1,
+          1,
+          4,
+          4,
+          4
+        ],
+        "native_shape": [
+          1,
+          1,
+          4,
+          4,
+          4
+        ],
+        "upsampled_shape": [
+          1,
+          1,
+          32,
+          32,
+          32
+        ],
+        "target_shape": [
+          1,
+          1,
+          32,
+          32,
+          32
+        ],
+        "positive_ratio": 0.041259765625,
+        "per_sample_positive_ratio": [
+          0.041259765625
+        ],
+        "foreground_ratio": 0.125,
+        "vanished_foreground_samples": 0,
+        "empty_boundary_samples": 0,
+        "high_coverage_samples": 0
+      }
+    ],
+    "112x112x80": [
+      {
+        "shape": [
+          1,
+          1,
+          112,
+          112,
+          80
+        ],
+        "native_shape": [
+          1,
+          1,
+          112,
+          112,
+          80
+        ],
+        "upsampled_shape": [
+          1,
+          1,
+          112,
+          112,
+          80
+        ],
+        "target_shape": [
+          1,
+          1,
+          112,
+          112,
+          80
+        ],
+        "positive_ratio": 0.014580676332116127,
+        "per_sample_positive_ratio": [
+          0.014580676332116127
+        ],
+        "foreground_ratio": 0.125,
+        "vanished_foreground_samples": 0,
+        "empty_boundary_samples": 0,
+        "high_coverage_samples": 0
+      },
+      {
+        "shape": [
+          1,
+          1,
+          56,
+          56,
+          40
+        ],
+        "native_shape": [
+          1,
+          1,
+          56,
+          56,
+          40
+        ],
+        "upsampled_shape": [
+          1,
+          1,
+          112,
+          112,
+          80
+        ],
+        "target_shape": [
+          1,
+          1,
+          112,
+          112,
+          80
+        ],
+        "positive_ratio": 0.014580676332116127,
+        "per_sample_positive_ratio": [
+          0.014580676332116127
+        ],
+        "foreground_ratio": 0.125,
+        "vanished_foreground_samples": 0,
+        "empty_boundary_samples": 0,
+        "high_coverage_samples": 0
+      },
+      {
+        "shape": [
+          1,
+          1,
+          28,
+          28,
+          20
+        ],
+        "native_shape": [
+          1,
+          1,
+          28,
+          28,
+          20
+        ],
+        "upsampled_shape": [
+          1,
+          1,
+          112,
+          112,
+          80
+        ],
+        "target_shape": [
+          1,
+          1,
+          112,
+          112,
+          80
+        ],
+        "positive_ratio": 0.014580676332116127,
+        "per_sample_positive_ratio": [
+          0.014580676332116127
+        ],
+        "foreground_ratio": 0.125,
+        "vanished_foreground_samples": 0,
+        "empty_boundary_samples": 0,
+        "high_coverage_samples": 0
+      },
+      {
+        "shape": [
+          1,
+          1,
+          14,
+          14,
+          10
+        ],
+        "native_shape": [
+          1,
+          1,
+          14,
+          14,
+          10
+        ],
+        "upsampled_shape": [
+          1,
+          1,
+          112,
+          112,
+          80
+        ],
+        "target_shape": [
+          1,
+          1,
+          112,
+          112,
+          80
+        ],
+        "positive_ratio": 0.014580676332116127,
+        "per_sample_positive_ratio": [
+          0.014580676332116127
+        ],
+        "foreground_ratio": 0.125,
+        "vanished_foreground_samples": 0,
+        "empty_boundary_samples": 0,
+        "high_coverage_samples": 0
+      }
+    ]
+  },
+  "analytic_diagnostics": {
+    "bfa_local": [
+      {
+        "stage": 1,
+        "main_norm": 1.0,
+        "boundary_norm": 0.02500000037252903,
+        "ratio": 0.02500000037252903,
+        "cosine": -1.0,
+        "opposite": true,
+        "reverse": false,
+        "status": "ok",
+        "main_parameters_with_gradient": 1,
+        "boundary_parameters_with_gradient": 1,
+        "raw_boundary_norm": 0.10000000149011612,
+        "raw_ratio": 0.10000000149011612,
+        "raw_cosine": -1.0,
+        "raw_status": "ok",
+        "boundary_contribution": "routed",
+        "boundary_weight": 0.1,
+        "cosine_threshold": -0.2,
+        "ratio_threshold": 0.1
+      },
+      {
+        "stage": 2,
+        "main_norm": 1.0,
+        "boundary_norm": 0.02500000037252903,
+        "ratio": 0.02500000037252903,
+        "cosine": -1.0,
+        "opposite": true,
+        "reverse": false,
+        "status": "ok",
+        "main_parameters_with_gradient": 1,
+        "boundary_parameters_with_gradient": 1,
+        "raw_boundary_norm": 0.07500000298023224,
+        "raw_ratio": 0.07500000298023224,
+        "raw_cosine": -1.0,
+        "raw_status": "ok",
+        "boundary_contribution": "routed",
+        "boundary_weight": 0.1,
+        "cosine_threshold": -0.2,
+        "ratio_threshold": 0.1
+      },
+      {
+        "stage": 3,
+        "main_norm": 1.0,
+        "boundary_norm": 0.02500000037252903,
+        "ratio": 0.02500000037252903,
+        "cosine": -1.0,
+        "opposite": true,
+        "reverse": false,
+        "status": "ok",
+        "main_parameters_with_gradient": 1,
+        "boundary_parameters_with_gradient": 1,
+        "raw_boundary_norm": 0.05000000074505806,
+        "raw_ratio": 0.05000000074505806,
+        "raw_cosine": -1.0,
+        "raw_status": "ok",
+        "boundary_contribution": "routed",
+        "boundary_weight": 0.1,
+        "cosine_threshold": -0.2,
+        "ratio_threshold": 0.1
+      },
+      {
+        "stage": 4,
+        "main_norm": 1.0,
+        "boundary_norm": 0.02500000037252903,
+        "ratio": 0.02500000037252903,
+        "cosine": -1.0,
+        "opposite": true,
+        "reverse": false,
+        "status": "ok",
+        "main_parameters_with_gradient": 1,
+        "boundary_parameters_with_gradient": 1,
+        "raw_boundary_norm": 0.02500000037252903,
+        "raw_ratio": 0.02500000037252903,
+        "raw_cosine": -1.0,
+        "raw_status": "ok",
+        "boundary_contribution": "routed",
+        "boundary_weight": 0.1,
+        "cosine_threshold": -0.2,
+        "ratio_threshold": 0.1
+      },
+      {
+        "stage": 5,
+        "main_norm": 1.0,
+        "boundary_norm": 0.0,
+        "ratio": 0.0,
+        "cosine": null,
+        "opposite": false,
+        "reverse": false,
+        "status": "missing_boundary_gradient",
+        "main_parameters_with_gradient": 1,
+        "boundary_parameters_with_gradient": 0,
+        "raw_boundary_norm": 0.0,
+        "raw_ratio": 0.0,
+        "raw_cosine": null,
+        "raw_status": "missing_boundary_gradient",
+        "boundary_contribution": "routed",
+        "boundary_weight": 0.1,
+        "cosine_threshold": -0.2,
+        "ratio_threshold": 0.1
+      }
+    ],
+    "bfa_deep": [
+      {
+        "stage": 1,
+        "main_norm": 1.0,
+        "boundary_norm": 0.10000000149011612,
+        "ratio": 0.10000000149011612,
+        "cosine": -1.0,
+        "opposite": true,
+        "reverse": true,
+        "status": "ok",
+        "main_parameters_with_gradient": 1,
+        "boundary_parameters_with_gradient": 1,
+        "raw_boundary_norm": 0.10000000149011612,
+        "raw_ratio": 0.10000000149011612,
+        "raw_cosine": -1.0,
+        "raw_status": "ok",
+        "boundary_contribution": "ordinary",
+        "boundary_weight": 0.1,
+        "cosine_threshold": -0.2,
+        "ratio_threshold": 0.1
+      },
+      {
+        "stage": 2,
+        "main_norm": 1.0,
+        "boundary_norm": 0.07500000298023224,
+        "ratio": 0.07500000298023224,
+        "cosine": -1.0,
+        "opposite": true,
+        "reverse": false,
+        "status": "ok",
+        "main_parameters_with_gradient": 1,
+        "boundary_parameters_with_gradient": 1,
+        "raw_boundary_norm": 0.07500000298023224,
+        "raw_ratio": 0.07500000298023224,
+        "raw_cosine": -1.0,
+        "raw_status": "ok",
+        "boundary_contribution": "ordinary",
+        "boundary_weight": 0.1,
+        "cosine_threshold": -0.2,
+        "ratio_threshold": 0.1
+      },
+      {
+        "stage": 3,
+        "main_norm": 1.0,
+        "boundary_norm": 0.05000000074505806,
+        "ratio": 0.05000000074505806,
+        "cosine": -1.0,
+        "opposite": true,
+        "reverse": false,
+        "status": "ok",
+        "main_parameters_with_gradient": 1,
+        "boundary_parameters_with_gradient": 1,
+        "raw_boundary_norm": 0.05000000074505806,
+        "raw_ratio": 0.05000000074505806,
+        "raw_cosine": -1.0,
+        "raw_status": "ok",
+        "boundary_contribution": "ordinary",
+        "boundary_weight": 0.1,
+        "cosine_threshold": -0.2,
+        "ratio_threshold": 0.1
+      },
+      {
+        "stage": 4,
+        "main_norm": 1.0,
+        "boundary_norm": 0.02500000037252903,
+        "ratio": 0.02500000037252903,
+        "cosine": -1.0,
+        "opposite": true,
+        "reverse": false,
+        "status": "ok",
+        "main_parameters_with_gradient": 1,
+        "boundary_parameters_with_gradient": 1,
+        "raw_boundary_norm": 0.02500000037252903,
+        "raw_ratio": 0.02500000037252903,
+        "raw_cosine": -1.0,
+        "raw_status": "ok",
+        "boundary_contribution": "ordinary",
+        "boundary_weight": 0.1,
+        "cosine_threshold": -0.2,
+        "ratio_threshold": 0.1
+      },
+      {
+        "stage": 5,
+        "main_norm": 1.0,
+        "boundary_norm": 0.0,
+        "ratio": 0.0,
+        "cosine": null,
+        "opposite": false,
+        "reverse": false,
+        "status": "missing_boundary_gradient",
+        "main_parameters_with_gradient": 1,
+        "boundary_parameters_with_gradient": 0,
+        "raw_boundary_norm": 0.0,
+        "raw_ratio": 0.0,
+        "raw_cosine": null,
+        "raw_status": "missing_boundary_gradient",
+        "boundary_contribution": "ordinary",
+        "boundary_weight": 0.1,
+        "cosine_threshold": -0.2,
+        "ratio_threshold": 0.1
+      }
+    ]
+  },
+  "original_checkpoint": "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided/Results/seed_42/result_LA_10l/fold_0/Model_iter_27000.pth",
+  "data_lists": {
+    "validation": "/aita_data/home/aita_duanxuelong/Dataset/LA/test.list",
+    "final_test": "/aita_data/home/aita_duanxuelong/Dataset/LA/test.list",
+    "independent_validation_test": false,
+    "test_sha256": "e55b18069e27d6eab3dc21b8d1dc05a99ef83110fedc789f81c461d7bb152199",
+    "train_sha256": "e88c3f0bae70edcca4bc16eca890673eee2bf3f7b74418249cb01b8cde2f924e",
+    "current_list_files_available_and_verified": {
+      "train": true,
+      "test": true
+    }
+  },
+  "tests_run": 16,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "passed": true,
+  "torch_version": "2.9.1+cu126",
+  "device": "cpu",
+  "note": "Synthetic checks and real checkpoint load; accuracy metrics mocked except exact-mask list-protocol test. No formal training."
+}

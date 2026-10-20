@@ -1,0 +1,48 @@
+/aita_data/home/aita_duanxuelong/.conda/envs/SSL29/bin/python -u train.py --dataset LA --labeled_num 10 --seed 42 --n_fold 1 --batch_size 4 --labeled_bs 2 --base_lr 0.01 --consistency 0.1 --consistency_rampup 200.0 --ema_decay 0.9 --in_channels 1 --num_classes 2 --patch_size 112 112 80 --data_path /aita_data/home/aita_duanxuelong/Dataset/LA --device cuda:5 --max_iterations 2 --test_interval 2 --output_dir Results/refactor_smoke_postdiag_20261020 --guidance_mode none --boundary_mode bfa_deep --auxiliary_mode none --boundary_weight 0.1 --boundary_padding_mode zero --gradient_diagnostic_interval 1 --gradient_cosine_threshold -0.2 --gradient_ratio_threshold 0.1
+test_all_four_isolated_gradient_scopes_with_fifth_stage_excluded (__main__.BoundaryRefactorTests) ... ok
+test_diagnostic_zero_missing_and_nonfinite_have_explicit_status (__main__.BoundaryRefactorTests) ... ok
+test_diagnostics_applied_vs_raw_and_do_not_touch_grads_rng_or_buffers (__main__.BoundaryRefactorTests) ... ok
+test_diagnostics_enabled_do_not_change_actual_training_update (__main__.BoundaryRefactorTests) ... ok
+test_experiments_are_independent_and_invalid_configuration_is_rejected (__main__.BoundaryRefactorTests) ... ok
+test_extreme_bce_dice_losses_and_gradients_are_finite (__main__.BoundaryRefactorTests) ... ok
+test_four_heads_shapes_shared_full_resolution_target_and_formula (__main__.BoundaryRefactorTests) ... ok
+test_labeled_prefix_enters_head_batchnorm_and_feature_gradient_interface (__main__.BoundaryRefactorTests) ... ok
+test_legacy_modes_keep_five_linear_heads_and_gradient_semantics (__main__.BoundaryRefactorTests) ... ok
+test_local_routing_matches_independent_autograd_and_full_mt_sum (__main__.BoundaryRefactorTests) ... ok
+test_modes_share_vnet_rng_heads_forward_targets_and_loss_initialization (__main__.BoundaryRefactorTests) ... ok
+test_none_matches_original_mt_three_updates_and_inference (__main__.BoundaryRefactorTests) ... ok
+test_original_checkpoint_strict_load_and_final_tensor_inference (__main__.BoundaryRefactorTests) ... ok
+test_original_resolution_laplacian_matches_scipy_and_padding_edges (__main__.BoundaryRefactorTests) ... ok
+test_student_update_single_optimizer_scheduler_and_original_ema (__main__.BoundaryRefactorTests) ... ok
+test_validation_and_final_test_list_sources_are_explicit (__main__.BoundaryRefactorTests) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 10.034s
+
+OK
+test_default_and_optional_forward_match_reference_with_same_rng (__main__.DecoderSupervisionTests) ... ok
+test_final_segmentation_loss_is_counted_once (__main__.DecoderSupervisionTests) ... ok
+test_la_native_side_shapes (__main__.DecoderSupervisionTests) ... ok
+test_labeled_only_head_gradients_and_finite_extreme_logits (__main__.DecoderSupervisionTests) ... ok
+test_old_state_dict_strict_inference_and_separate_heads (__main__.DecoderSupervisionTests) ... ok
+test_shapes_and_nearest_labels_match_all_four_outputs (__main__.DecoderSupervisionTests) ... ok
+test_side_features_match_exact_ducisc_pre_block_positions (__main__.DecoderSupervisionTests) ... ok
+test_trainer_single_student_ema_update_and_original_initialization (__main__.DecoderSupervisionTests) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 3.890s
+
+OK
+Namespace(data_path='/aita_data/home/aita_duanxuelong/Dataset/LA', dataset='LA', labeled_num=10, nms=True, in_channels=1, num_classes=2, patch_size=[112, 112, 80], batch_size=4, labeled_bs=2, seed=42, base_lr=0.01, max_iterations=2, n_fold=1, output_dir='Results/refactor_smoke_postdiag_20261020', test_interval=2, resume_model_path=None, start_iteration=0, consistency_rampup=200.0, consistency=0.1, ema_decay=0.9, device='cuda:5', boundary_mode='bfa_deep', boundary_weight=0.1, boundary_padding_mode='zero', auxiliary_mode='none', decoder_aux_weight=0.1, final_supervision_weight=1.0, gradient_diagnostic_interval=1, gradient_cosine_threshold=-0.2, gradient_ratio_threshold=0.1, guidance_mode='none')
+train total 80 samples
+4 iterations per epoch
+  0%|                                           | 0/1 [00:00<?, ?it/s]/aita_data/home/aita_duanxuelong/.conda/envs/SSL29/lib/python3.10/logging/__init__.py:368: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  msg = msg % self.args
+iteration 0 : loss : 1.007194 supervised : 0.931695 consistency : 0.062821 lr : 0.009999
+boundary mode=bfa_deep total=0.754574 positive_ratios=[0.02525360696017742, 0.02525360696017742, 0.02525360696017742, 0.02525360696017742]
+iteration 1 : loss : 1.070014 supervised : 0.994303 consistency : 0.036117 lr : 0.009998
+boundary mode=bfa_deep total=0.756862 positive_ratios=[0.025053810328245163, 0.025053810328245163, 0.025053810328245163, 0.025053810328245163]
+iteration 2 : asd : 27.819736 boundary_f1_1voxel : 0.042795
+iteration 2 : mean_dice : 0.181699 mean_hd95 : 56.237204
+  0%|                                           | 0/1 [01:06<?, ?it/s]

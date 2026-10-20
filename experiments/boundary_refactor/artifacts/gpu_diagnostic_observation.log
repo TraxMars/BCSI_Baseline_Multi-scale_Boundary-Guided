@@ -1,0 +1,7 @@
+/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided_BFA_Refactor/experiments/boundary_refactor/check_gpu_diagnostic_observation.py:53: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  captured['losses']=dict(main_MT=float(main_loss),boundary=float(boundary.total_loss),
+train total 80 samples
+bfa_deep: bitwise_equal=True, max_abs_error=0, actual_gradient_tensors=134, calls={'optimizer_step_attempts_intercepted': 1, 'actual_optimizer_updates': 0, 'scheduler_step': 0, 'ema_update': 0, 'diagnostic_calls': 1}
+bfa_local: bitwise_equal=True, max_abs_error=0, actual_gradient_tensors=134, calls={'optimizer_step_attempts_intercepted': 1, 'actual_optimizer_updates': 0, 'scheduler_step': 0, 'ema_update': 0, 'diagnostic_calls': 1}
+PASS: deep/local diagnostic calls preserve every observed tensor and RNG stream bitwise; zero optimizer/EMA/scheduler updates.

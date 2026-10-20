@@ -1,0 +1,93 @@
+{
+  "decoder_shapes": {
+    "LA_112x112x80": {
+      "outputs": [
+        [
+          1,
+          2,
+          14,
+          14,
+          10
+        ],
+        [
+          1,
+          2,
+          28,
+          28,
+          20
+        ],
+        [
+          1,
+          2,
+          56,
+          56,
+          40
+        ],
+        [
+          1,
+          2,
+          112,
+          112,
+          80
+        ]
+      ],
+      "targets": [
+        [
+          1,
+          14,
+          14,
+          10
+        ],
+        [
+          1,
+          28,
+          28,
+          20
+        ],
+        [
+          1,
+          56,
+          56,
+          40
+        ],
+        [
+          1,
+          112,
+          112,
+          80
+        ]
+      ],
+      "target_foreground_ratios": [
+        0.125,
+        0.125,
+        0.125,
+        0.125
+      ]
+    }
+  },
+  "data": "synthetic only",
+  "reference_exact_forward_backward_rng": true,
+  "final_main_loss_weight": 1.0,
+  "side_mean_weight_for_update_test": 0.1,
+  "final_not_in_auxiliary_loss": true,
+  "legacy_state_dict_strict_load": true,
+  "tap_positions": [
+    "before block_six, after skip4",
+    "before block_seven, after skip3",
+    "before block_eight, after skip2"
+  ],
+  "trainer_C_single_step": {
+    "optimizer_step": 1,
+    "ema_update": 1,
+    "scheduler_step": 1,
+    "main_final_supervision_calls": 1,
+    "initialization_rng_matches_none": true,
+    "total_loss": 0.6721426844596863
+  },
+  "tests_run": 8,
+  "failures": 0,
+  "errors": 0,
+  "passed": true,
+  "torch_version": "2.9.1+cu126",
+  "note": "Synthetic tests only; no performance or formal-training claim."
+}

@@ -1,0 +1,21 @@
+test_all_four_isolated_gradient_scopes_with_fifth_stage_excluded (__main__.BoundaryRefactorTests) ... ok
+test_diagnostic_zero_missing_and_nonfinite_have_explicit_status (__main__.BoundaryRefactorTests) ... ok
+test_diagnostics_applied_vs_raw_and_do_not_touch_grads_rng_or_buffers (__main__.BoundaryRefactorTests) ... ok
+test_diagnostics_enabled_do_not_change_actual_training_update (__main__.BoundaryRefactorTests) ... ok
+test_experiments_are_independent_and_invalid_configuration_is_rejected (__main__.BoundaryRefactorTests) ... ok
+test_extreme_bce_dice_losses_and_gradients_are_finite (__main__.BoundaryRefactorTests) ... ok
+test_four_heads_shapes_shared_full_resolution_target_and_formula (__main__.BoundaryRefactorTests) ... ok
+test_labeled_prefix_enters_head_batchnorm_and_feature_gradient_interface (__main__.BoundaryRefactorTests) ... ok
+test_legacy_modes_keep_five_linear_heads_and_gradient_semantics (__main__.BoundaryRefactorTests) ... ok
+test_local_routing_matches_independent_autograd_and_full_mt_sum (__main__.BoundaryRefactorTests) ... ok
+test_modes_share_vnet_rng_heads_forward_targets_and_loss_initialization (__main__.BoundaryRefactorTests) ... ok
+test_none_matches_original_mt_three_updates_and_inference (__main__.BoundaryRefactorTests) ... ok
+test_original_checkpoint_strict_load_and_final_tensor_inference (__main__.BoundaryRefactorTests) ... ok
+test_original_resolution_laplacian_matches_scipy_and_padding_edges (__main__.BoundaryRefactorTests) ... ok
+test_student_update_single_optimizer_scheduler_and_original_ema (__main__.BoundaryRefactorTests) ... ok
+test_validation_and_final_test_list_sources_are_explicit (__main__.BoundaryRefactorTests) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 10.104s
+
+OK

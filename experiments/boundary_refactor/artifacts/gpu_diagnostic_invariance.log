@@ -1,0 +1,13 @@
+train total 80 samples
+bfa_deep diagnostics_interval=0: {'optimizer': 2, 'scheduler': 2, 'ema': 2}, diagnostic_rows=0
+bfa_deep diagnostics_interval=1: {'optimizer': 2, 'scheduler': 2, 'ema': 2}, diagnostic_rows=10
+bfa_deep: bitwise_equal=False, within_tolerance=False, max_abs_error=0.0004719235
+bfa_local diagnostics_interval=0: {'optimizer': 2, 'scheduler': 2, 'ema': 2}, diagnostic_rows=0
+bfa_local diagnostics_interval=1: {'optimizer': 2, 'scheduler': 2, 'ema': 2}, diagnostic_rows=10
+bfa_local: bitwise_equal=False, within_tolerance=False, max_abs_error=0.000176329166
+Traceback (most recent call last):
+  File "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided_BFA_Refactor/experiments/boundary_refactor/check_gpu_diagnostics.py", line 195, in <module>
+    main()
+  File "/aita_data/home/aita_duanxuelong/BCSI_Baseline_Multi-scale_Boundary-Guided_BFA_Refactor/experiments/boundary_refactor/check_gpu_diagnostics.py", line 190, in main
+    raise AssertionError('Diagnostic invariance check failed; inspect outside_tolerance and call counts in the written report')
+AssertionError: Diagnostic invariance check failed; inspect outside_tolerance and call counts in the written report

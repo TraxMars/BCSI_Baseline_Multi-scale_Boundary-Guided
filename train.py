@@ -78,15 +78,27 @@ parser.add_argument('--consistency', type=float, default=0.1, help='consistency'
 parser.add_argument('--ema_decay', type=float, default=0.9, help='ema_decay')
 
 parser.add_argument('--device', type=str, default='cuda')
-parser.add_argument('--boundary_mode', choices=['none', 'deep', 'local'], default='none')
+parser.add_argument('--boundary_mode', choices=['none', 'deep', 'local', 'bfa_deep', 'bfa_local'], default='none')
 parser.add_argument('--boundary_weight', type=float, default=0.1)
+parser.add_argument('--boundary_padding_mode', choices=['zero', 'replicate'], default='zero',
+                    help='BFA Laplacian crop padding; legacy deep/local remains unchanged')
+parser.add_argument('--auxiliary_mode', choices=['none', 'decoder_deep_seg'], default='none')
+parser.add_argument('--decoder_aux_weight', type=float, default=0.1)
+parser.add_argument('--final_supervision_weight', type=float, default=1.0,
+                    help='Final CE+Dice coefficient for Decoder_DS_C; counted once')
+parser.add_argument('--gradient_diagnostic_interval', type=int, default=0,
+                    help='Observe boundary gradients every N iterations (0 disables)')
+parser.add_argument('--gradient_cosine_threshold', type=float, default=-0.2)
+parser.add_argument('--gradient_ratio_threshold', type=float, default=0.1)
 parser.add_argument('--guidance_mode', choices=['none'], default='none',
                     help='Legacy BGS is disabled in this repository')
 
 args = parser.parse_args()
-if args.boundary_mode != 'none':
+if args.boundary_mode != 'none' and args.auxiliary_mode != 'none':
+    parser.error('Boundary and decoder deep supervision experiments must be independent')
+if args.boundary_mode != 'none' or args.auxiliary_mode != 'none':
     if args.resume_model_path or args.start_iteration:
-        parser.error('Boundary A/B must start independently; model-only resume loses auxiliary/optimizer state')
+        parser.error('Auxiliary experiments must start independently; model-only resume loses auxiliary/optimizer state')
     if not 0 < args.labeled_bs < args.batch_size:
         parser.error('Boundary MT requires both labeled and unlabeled samples')
     if not np.isfinite(args.boundary_weight) or args.boundary_weight < 0:
@@ -101,7 +113,8 @@ def boundary_status(snapshot_path, state, iteration, **extra):
     path = Path(snapshot_path) / 'run_status.json'
     temporary = path.with_suffix('.json.tmp')
     temporary.write_text(json.dumps(dict(state=state, iteration=iteration,
-                                        boundary_mode=args.boundary_mode, **extra), indent=2))
+                                        boundary_mode=args.boundary_mode,
+                                        auxiliary_mode=args.auxiliary_mode, **extra), indent=2))
     temporary.replace(path)
 
 
@@ -151,7 +164,7 @@ def train(args, snapshot_path):
     train_loader = DataLoader(train_dataset, batch_sampler=batch_sampler, num_workers=1, pin_memory=True, worker_init_fn=worker_init_fn)
 
     logging.info("{} iterations per epoch".format(len(train_loader)))
-    if args.boundary_mode != 'none':
+    if args.boundary_mode != 'none' or args.auxiliary_mode != 'none':
         data_root = Path(train_dataset.data_dir)
         split_root = data_root
         if 'BraTS' in args.dataset:
@@ -165,6 +178,13 @@ def train(args, snapshot_path):
                 metadata['splits'][name] = dict(path=str(source),
                     sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
                     ids=source.read_text().splitlines())
+        validation_name = 'val' if 'BraTS' in args.dataset else 'test'
+        metadata['evaluation'] = dict(
+            validation_list=metadata['splits'][validation_name]['path'],
+            validation_sha256=metadata['splits'][validation_name]['sha256'],
+            test_list=metadata['splits']['test']['path'],
+            test_sha256=metadata['splits']['test']['sha256'],
+            validation_test_same_list=validation_name == 'test')
         (Path(snapshot_path) / 'data_split_manifest.json').write_text(
             json.dumps(metadata, indent=2))
     # max_epoch = max_iterations // len(train_loader) + 1
@@ -176,13 +196,13 @@ def train(args, snapshot_path):
         for i_batch, sampled_batch in enumerate(train_loader):
             row = trainer.train(sampled_batch, iter_num, snapshot_path)
             iter_num = iter_num + 1
-            if args.boundary_mode != 'none':
+            if args.boundary_mode != 'none' or args.auxiliary_mode != 'none':
                 boundary_status(snapshot_path, 'training', iter_num,
                                 total_loss=row['total_loss'])
             if args.test_interval and iter_num > 0 and iter_num % args.test_interval == 0:
                 trainer.test(snapshot_path, iter_num)
             if iter_num >= max_iterations:
-                if args.boundary_mode != 'none':
+                if args.boundary_mode != 'none' or args.auxiliary_mode != 'none':
                     trainer.save_boundary_state(snapshot_path, iter_num)
                     boundary_status(snapshot_path, 'completed', iter_num,
                                     best_validation_dice=trainer.best_performance)
@@ -202,8 +222,10 @@ if __name__ == '__main__':
 
         dataset_name = args.dataset.strip('/').replace(' ', '_')
         snapshot_path = os.path.join(args.output_dir, "result_{}_{}l".format(dataset_name, args.labeled_num), "fold_" + str(fold))
-        if args.boundary_mode != 'none':
-            experiment = 'Boundary_A' if args.boundary_mode == 'deep' else 'Boundary_B'
+        if args.boundary_mode != 'none' or args.auxiliary_mode != 'none':
+            experiment = ({'deep': 'Boundary_A', 'local': 'Boundary_B',
+                           'bfa_deep': 'BFA_Deep_A2', 'bfa_local': 'BFA_Local_B2'}[args.boundary_mode]
+                          if args.boundary_mode != 'none' else 'Decoder_DS_C')
             snapshot_path = os.path.join(args.output_dir, experiment, f'seed_{args.seed}',
                                         f'result_{dataset_name}_{args.labeled_num}l', f'fold_{fold}')
             # Fail before writing ANY source, log, config or checkpoint in an old run.
@@ -217,9 +239,10 @@ if __name__ == '__main__':
         shutil.copyfile("./train.py", snapshot_path + "/code/train.py")
         shutil.copyfile("./trainer.py", snapshot_path + "/code/trainer.py")
         shutil.copyfile("./model/vnet.py", snapshot_path + "/code/vnet.py")
-        if args.boundary_mode != 'none':
+        if args.boundary_mode != 'none' or args.auxiliary_mode != 'none':
             sources = ['train.py', 'trainer.py', 'prediction.py', 'model/vnet.py',
-                       'utils/boundary_supervision.py', 'utils/losses.py',
+                       'utils/boundary_supervision.py', 'utils/bfa_supervision.py',
+                       'utils/decoder_supervision.py', 'utils/gradient_diagnostics.py', 'utils/losses.py',
                        'utils/utils.py', 'utils/transforms.py',
                        'dataloader/dataset.py', 'dataloader/TwoStreamBatchSampler.py']
             hashes = {}
@@ -235,6 +258,28 @@ if __name__ == '__main__':
                           boundary_target='nearest foreground >0; 3x3x3 morphological gradient; replicate padding',
                           boundary_loss='mean(0.5 BCEWithLogits + 0.5 spatial soft Dice), five equal scales',
                           scheduler='PolyWarmRestartScheduler(power=0.9, warm_restart_iters=8000)')
+            if args.boundary_mode in ('bfa_deep', 'bfa_local'):
+                config['boundary_target'] = (
+                    'one original-resolution foreground Laplacian26/-1, clamp then >0.1; '
+                    f'{args.boundary_padding_mode} padding; shared by four heads')
+                config['boundary_loss'] = (
+                    'mean4(0.5 BCEWithLogits + 0.5 SoftDice(smooth=1)), '
+                    'trilinear logits to GT size, align_corners=True')
+                config['boundary_head'] = (
+                    'labeled-only 3x3x3 C->16 bias=False + BN + ReLU + 1x1x1->1 bias=False; '
+                    'Kaiming_normal(a=1); encoder x1..x4 only')
+            elif args.boundary_mode == 'none':
+                config['boundary_target'] = 'none'
+                config['boundary_loss'] = 'none'
+                config['boundary_head'] = 'none'
+            config['loss_weights'] = dict(
+                final_segmentation=args.final_supervision_weight if args.auxiliary_mode != 'none' else 1.0,
+                boundary_total=args.boundary_weight if args.boundary_mode != 'none' else 0.0,
+                decoder_sides_total=args.decoder_aux_weight if args.auxiliary_mode != 'none' else 0.0,
+                decoder_side_count=3 if args.auxiliary_mode != 'none' else 0)
+            config['decoder_supervision'] = (
+                'skip-add pre-block sides /8,/4,/2: nearest GT + original MT CE/Dice; final counted once'
+                if args.auxiliary_mode != 'none' else 'none')
             (Path(snapshot_path) / 'experiment_config.json').write_text(
                 json.dumps(config, indent=2))
 
@@ -246,6 +291,6 @@ if __name__ == '__main__':
         try:
             train(args, snapshot_path)
         except BaseException as error:
-            if args.boundary_mode != 'none':
+            if args.boundary_mode != 'none' or args.auxiliary_mode != 'none':
                 boundary_status(snapshot_path, 'failed', None, error=repr(error))
             raise
